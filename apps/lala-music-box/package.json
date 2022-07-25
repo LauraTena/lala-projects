@@ -1,8 +1,8 @@
 {
-  "name": "@lau.ra/portfolio",
+  "name": "@lau.ra/lala-music-box",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite --port 3011",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.ts,.vue src"
