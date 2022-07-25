@@ -1,0 +1,27 @@
+/* Media Queries CSS Hacks */
+
+$explorer: "all and (-ms-high-contrast: none), (-ms-high-contrast: active) "; // hack for explorer with @media #{$explorer} 
+$edge: "(-ms-ime-align:auto)"; // hack for edge with @supports #{$edge}
+$ios: "(-webkit-overflow-scrolling: touch)"; // hack for edge with @supports #{$ios}
+$safari: "screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)"; // hack for edge with @media #{$safari}  { @media { css rules } }
+
+/* Mixins CSS Hacks with @content */
+
+@mixin hack-safari {               // hack for safari with @include hack-safari { }
+
+    @media not all and (min-resolution:.001dpcm) { 
+      
+        @supports (-webkit-appearance:none) {
+  
+            @content; 
+        }
+    }
+}
+
+@mixin hack-firefox {               // hack for firefox with @include hack-firefox { }
+
+    @-moz-document url-prefix() {
+        
+        @content; 
+    }
+}

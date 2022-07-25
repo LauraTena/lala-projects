@@ -1,0 +1,317 @@
+/* family */
+
+$museoSans: 'MuseoSans', Helvetica, Arial, sans-serif;
+$fontIcon: 'Frontiers-Iconography-Next' !important;
+
+/* weight */
+
+$extraBold: 900;
+$bold: 700;
+$medium: 500;
+$light: 300;
+
+/* size */
+$basePx: 16;
+
+
+
+@mixin f-96 {
+  font-size: 96 / $basePx + #{rem};
+  line-height: 116 / $basePx + #{rem};
+}
+
+@mixin f-96-700 {
+  @include f-96;
+  font-weight: 700;
+}
+
+@mixin f-96-500 {
+  @include f-96;
+  font-weight: 500;
+}
+
+@mixin f-96-300 {
+  @include f-96;
+  font-weight: 300;
+}
+
+@mixin f-72 {
+  font-size: 72 / $basePx + #{rem};
+  line-height: 86 / $basePx + #{rem};
+}
+
+@mixin f-72-700 {
+  @include f-72;
+  font-weight: 700;
+}
+
+@mixin f-72-500 {
+  @include f-72;
+  font-weight: 500;
+}
+
+@mixin f-72-300 {
+  @include f-72;
+  font-weight: 300;
+}
+
+@mixin f-64 {
+  font-size: 64 / $basePx + #{rem};
+  line-height: 76 / $basePx + #{rem};
+}
+
+@mixin f-64-700 {
+  @include f-64;
+  font-weight: 700;
+}
+
+@mixin f-64-500 {
+  @include f-64;
+  font-weight: 500;
+}
+
+@mixin f-64-300 {
+  @include f-64;
+  font-weight: 300;
+}
+
+@mixin f-56 {
+  font-size: 56 / $basePx + #{rem};
+  line-height: 67 / $basePx + #{rem};
+}
+
+@mixin f-56-700 {
+  @include f-56;
+  font-weight: 700;
+}
+
+@mixin f-56-500 {
+  @include f-56;
+  font-weight: 500;
+}
+
+@mixin f-56-300 {
+  @include f-56;
+  font-weight: 300;
+}
+
+@mixin f-48 {
+  font-size: 48 / $basePx + #{rem};
+  line-height: 58 / $basePx + #{rem};
+}
+
+@mixin f-48-700 {
+  @include f-48;
+  font-weight: 700;
+}
+
+@mixin f-48-500 {
+  @include f-48;
+  font-weight: 500;
+}
+
+@mixin f-48-300 {
+  @include f-48;
+  font-weight: 300;
+}
+
+@mixin f-40 {
+  font-size: 40 / $basePx + #{rem};
+  line-height: 56 / $basePx + #{rem};
+}
+
+@mixin f-40-700 {
+  @include f-40;
+  font-weight: 700;
+}
+
+@mixin f-40-500 {
+  @include f-40;
+  font-weight: 500;
+}
+
+@mixin f-40-300 {
+  @include f-40;
+  font-weight: 300;
+}
+
+@mixin f-32 {
+  font-size: 32 / $basePx + #{rem};
+  line-height: 44 / $basePx + #{rem};
+}
+
+@mixin f-32-700 {
+  @include f-32;
+  font-weight: 700;
+}
+
+@mixin f-32-500 {
+  @include f-32;
+  font-weight: 500;
+}
+
+@mixin f-32-300 {
+  @include f-32;
+  font-weight: 300;
+}
+
+@mixin f-28 {
+  font-size: 28 / $basePx + #{rem};
+  line-height: 39 / $basePx + #{rem};
+}
+
+@mixin f-28-700 {
+  @include f-28;
+  font-weight: 700;
+}
+
+@mixin f-28-500 {
+  @include f-28;
+  font-weight: 500;
+}
+
+@mixin f-28-300 {
+  @include f-28;
+  font-weight: 300;
+}
+
+@mixin f-24 {
+  font-size: 24 / $basePx + #{rem};
+  line-height: 33 / $basePx + #{rem};
+}
+
+@mixin f-24-700 {
+  @include f-24;
+  font-weight: 700;
+}
+
+@mixin f-24-500 {
+  @include f-24;
+  font-weight: 500;
+}
+
+@mixin f-24-300 {
+  @include f-24;
+  font-weight: 300;
+}
+
+@mixin f-20 {
+  font-size: 20 / $basePx + #{rem};
+  line-height: 28 / $basePx + #{rem};
+}
+
+@mixin f-20-700 {
+  @include f-20;
+  font-weight: 700;
+}
+
+@mixin f-20-500 {
+  @include f-20;
+  font-weight: 500;
+}
+
+@mixin f-20-300 {
+  @include f-20;
+  font-weight: 300;
+}
+
+@mixin f-18 {
+  font-size: 18 / $basePx + #{rem};
+  line-height: 28 / $basePx + #{rem};
+}
+
+@mixin f-18-700 {
+  @include f-18;
+  font-weight: 700;
+}
+
+@mixin f-18-500 {
+  @include f-18;
+  font-weight: 500;
+}
+
+@mixin f-18-300 {
+  @include f-18;
+  font-weight: 300;
+}
+
+@mixin f-16 {
+  font-size: 16 / $basePx + #{rem};
+  line-height: 22 / $basePx + #{rem};
+}
+
+@mixin f-16-700 {
+  @include f-16;
+  font-weight: 700;
+}
+
+@mixin f-16-500 {
+  @include f-16;
+  font-weight: 500;
+}
+
+@mixin f-16-300 {
+  @include f-16;
+  font-weight: 300;
+}
+
+@mixin f-14 {
+  font-size: 14 / $basePx + #{rem};
+  line-height: 20 / $basePx + #{rem};
+}
+
+@mixin f-14-700 {
+  @include f-14;
+  font-weight: 700;
+}
+
+@mixin f-14-500 {
+  @include f-14;
+  font-weight: 500;
+}
+
+@mixin f-14-300 {
+  @include f-14;
+  font-weight: 300;
+}
+
+@mixin f-12 {
+  font-size: 12 / $basePx + #{rem};
+  line-height: 17 / $basePx + #{rem};
+}
+
+@mixin f-12-700 {
+  @include f-12;
+  font-weight: 700;
+}
+
+@mixin f-12-500 {
+  @include f-12;
+  font-weight: 500;
+}
+
+@mixin f-12-300 {
+  @include f-12;
+  font-weight: 300;
+}
+
+@mixin f-10 {
+  font-size: 10 / $basePx + #{rem};
+  line-height: 14 / $basePx + #{rem};
+}
+
+@mixin f-10-700 {
+  @include f-10;
+  font-weight: 700;
+}
+
+@mixin f-10-500 {
+  @include f-10;
+  font-weight: 500;
+}
+
+@mixin f-10-300 {
+  @include f-10;
+  font-weight: 300;
+}
+

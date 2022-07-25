@@ -1,0 +1,21 @@
+{
+  "name": "@frontiers-sass/public-pages",
+  "description": "This package provides the SASS configuration files to create Frontiers public pages. It provides: variables, mixins, icons, layout styles, etc.",
+  "author": "Metropolis Team",
+  "license": "MIT",
+  "keywords": [
+    "frontiers",
+    "sass",
+    "common",
+    "public pages"
+  ],
+  "version": "1.0",
+  "private": false,
+  "files": [
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://devops-server.frontiersin.net/Design/Styles/_git/SassPublicPages"
+  }
+}

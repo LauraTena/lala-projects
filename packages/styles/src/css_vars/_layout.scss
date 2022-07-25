@@ -1,0 +1,122 @@
+$maxWidthPx: 1920;
+
+:root {
+  --layout-col-1: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 1, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-2: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 2, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-3: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 3, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-4: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 4, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-5: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 5, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-6: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 6, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-7: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 7, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-8: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 8, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-9: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 9, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-10: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 10, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-11: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 11, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-12: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 12, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-13: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 13, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-14: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 14, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-15: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 15, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-16: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 16, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-17: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 17, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-18: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 18, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-19: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 19, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-20: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 20, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-21: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 21, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-22: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 22, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-23: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 23, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-col-24: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 24, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+  --layout-gap: 32px;
+  --ibar-height: 64px;
+  --layout-max-width-px: #{$maxWidthPx};
+  --layout-max-width: 1890px;
+
+  @media #{$break-xl-min} {
+    --layout-col-1: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 1, $fullWidth: 1890, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-1: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 1, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-2: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 2, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-3: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 3, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-4: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 4, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-5: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 5, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-6: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 6, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-7: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 7, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-8: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 8, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-9: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 9, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-10: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 10, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-11: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 11, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-12: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 12, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-13: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 13, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-14: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 14, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-15: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 15, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-16: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 16, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-17: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 17, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-18: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 18, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-19: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 19, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-20: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 20, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-21: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 21, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-22: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 22, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-23: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 23, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-col-24: #{getGridWidth($col: 24, $gap: 32, $selectionCol: 24, $fullWidth: $maxWidthPx, $widthUnit: 'px', $gapLeft: false, $gapRight: false)};
+    --layout-gap: 32px;
+  }
+
+  @media #{$break-md} {
+    --layout-col-1: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 1, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-2: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 2, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-3: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 3, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-4: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 4, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-5: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 5, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-6: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 6, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-7: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 7, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-8: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 8, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-9: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 9, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-10: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 10, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-11: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 11, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-12: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 12, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-13: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 13, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-14: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 14, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-15: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 15, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-16: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 16, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-17: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 17, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-18: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 18, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-19: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 19, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-20: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 20, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-21: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 21, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-22: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 22, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-23: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 23, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-24: #{getGridWidth($col: 24, $gap: 16, $selectionCol: 24, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-gap: 16px;
+    --ibar-height: 48px;
+  }
+
+  @media #{$break-sm} {
+    --layout-col-1: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 1, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-2: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 2, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-3: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 3, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-4: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 4, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-5: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 5, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-6: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 6, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-7: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 7, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-8: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 8, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-9: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 9, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-10: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 10, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-11: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 11, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-12: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 12, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-13: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 13, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-14: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 14, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-15: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 15, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-16: #{getGridWidth($col: 16, $gap: 16, $selectionCol: 16, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-gap: 16px;
+  }
+
+  @media #{$break-xs} {
+    --layout-col-1: #{getGridWidth($col: 8, $gap: 16, $selectionCol: 1, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-2: #{getGridWidth($col: 8, $gap: 16, $selectionCol: 2, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-3: #{getGridWidth($col: 8, $gap: 16, $selectionCol: 3, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-4: #{getGridWidth($col: 8, $gap: 16, $selectionCol: 4, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-5: #{getGridWidth($col: 8, $gap: 16, $selectionCol: 5, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-6: #{getGridWidth($col: 8, $gap: 16, $selectionCol: 6, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-7: #{getGridWidth($col: 8, $gap: 16, $selectionCol: 7, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-col-8: #{getGridWidth($col: 8, $gap: 16, $selectionCol: 8, $fullWidth: 100, $widthUnit: 'vw', $gapLeft: false, $gapRight: false)};
+    --layout-gap: 16px;
+  }
+}

@@ -1,0 +1,125 @@
+$transitionOverlay: opacity 380ms $bezier;
+
+/* box-shadows */
+
+$elevation-up-10: 0px -1px 2px rgba(40, 40, 40, 0.12), 0px -2px 1px rgba(40, 40, 40, 0.08), 0px -1px 3px rgba(40, 40, 40, 0.16);
+$elevation-up-20: 0px -4px 5px rgba(40, 40, 40, 0.12), 0px -1px 10px rgba(40, 40, 40, 0.08), 0px -2px 4px rgba(40, 40, 40, 0.16);
+$elevation-up-30: 0px -8px 10px rgba(40, 40, 40, 0.12), 0px -3px 14px rgba(40, 40, 40, 0.08), 0px -5px 5px rgba(40, 40, 40, 0.16);
+$elevation-up-40: 0px -12px 17px rgba(40, 40, 40, 0.12), 0px -5px 22px rgba(40, 40, 40, 0.08), 0px -7px 8px rgba(40, 40, 40, 0.16);
+$elevation-up-50: 0px -24px 38px rgba(40, 40, 40, 0.12), 0px -9px 46px rgba(40, 40, 40, 0.08), 0px -11px 15px rgba(40, 40, 40, 0.16);
+$elevation-center-10: 0px 0px 2px rgba(40, 40, 40, 0.12), 0px 0px 1px rgba(40, 40, 40, 0.08), 0px 0px 3px rgba(40, 40, 40, 0.16);
+$elevation-center-20: 0px 0px 5px rgba(40, 40, 40, 0.12), 0px 0px 10px rgba(40, 40, 40, 0.08), 0px 0px 4px rgba(40, 40, 40, 0.16);
+$elevation-center-30: 0px 0px 10px rgba(40, 40, 40, 0.12), 0px 0px 14px rgba(40, 40, 40, 0.08), 0px 0px 5px rgba(40, 40, 40, 0.16);
+$elevation-center-40: 0px 0px 17px rgba(40, 40, 40, 0.12), 0px 0px 22px rgba(40, 40, 40, 0.08), 0px 0px 8px rgba(40, 40, 40, 0.16);
+$elevation-center-50: 0px 0px 38px rgba(40, 40, 40, 0.12), 0px 0px 46px rgba(40, 40, 40, 0.08), 0px 0px 15px rgba(40, 40, 40, 0.16);
+$elevation-bottom-10: 0px 1px 2px rgba(40, 40, 40, 0.12), 0px 2px 1px rgba(40, 40, 40, 0.08), 0px 1px 3px rgba(40, 40, 40, 0.16);
+$elevation-bottom-20: 0px 4px 5px rgba(40, 40, 40, 0.12), 0px 1px 10px rgba(40, 40, 40, 0.08), 0px 2px 4px rgba(40, 40, 40, 0.16);
+$elevation-bottom-30: 0px 8px 10px rgba(40, 40, 40, 0.12), 0px 3px 14px rgba(40, 40, 40, 0.08), 0px 5px 5px rgba(40, 40, 40, 0.16);
+$elevation-bottom-40: 0px 12px 17px rgba(40, 40, 40, 0.12), 0px 5px 22px rgba(40, 40, 40, 0.08), 0px 7px 8px rgba(40, 40, 40, 0.16);
+$elevation-bottom-50: 0px 24px 38px rgba(40, 40, 40, 0.12), 0px 9px 46px rgba(40, 40, 40, 0.08), 0px 11px 15px rgba(40, 40, 40, 0.16);
+$elevation-right-10: 1px 0px 2px rgba(40, 40, 40, 0.12), 2px 0px 1px rgba(40, 40, 40, 0.08), 1px 0px 3px rgba(40, 40, 40, 0.16);
+$elevation-right-20: 4px 0px 5px rgba(40, 40, 40, 0.12), 1px 0px 10px rgba(40, 40, 40, 0.08), 2px 0px 4px rgba(40, 40, 40, 0.16);
+$elevation-right-30: 8px 0px 10px rgba(40, 40, 40, 0.12), 3px 0px 14px rgba(40, 40, 40, 0.08), 5px 0px 5px rgba(40, 40, 40, 0.16);
+$elevation-right-40: 12px 0px 17px rgba(40, 40, 40, 0.12), 5px 0px 22px rgba(40, 40, 40, 0.08), 7px 0px 8px rgba(40, 40, 40, 0.16);
+$elevation-right-50: 24px 0px 38px rgba(40, 40, 40, 0.12), 9px 0px 46px rgba(40, 40, 40, 0.08), 11px 0px 15px rgba(40, 40, 40, 0.16);
+$elevation-left-10: -1px 0px 2px rgba(40, 40, 40, 0.12), -2px 0px 1px rgba(40, 40, 40, 0.08), -1px 0px 3px rgba(40, 40, 40, 0.16);
+$elevation-left-20: -4px 0px 5px rgba(40, 40, 40, 0.12), -1px 0px 10px rgba(40, 40, 40, 0.08), -2px 0px 4px rgba(40, 40, 40, 0.16);
+$elevation-left-30: -8px 0px 10px rgba(40, 40, 40, 0.12), -3px 0px 14px rgba(40, 40, 40, 0.08), -5px 0px 5px rgba(40, 40, 40, 0.16);
+$elevation-left-40: -12px 0px 17px rgba(40, 40, 40, 0.12), -5px 0px 22px rgba(40, 40, 40, 0.08), -7px 0px 8px rgba(40, 40, 40, 0.16);
+$elevation-left-50: -24px 0px 38px rgba(40, 40, 40, 0.12), 8px 0px 46px rgba(40, 40, 40, 0.12), -11px 0px 15px rgba(40, 40, 40, 0.16);
+
+@mixin shadow-card-public-pages {
+  transition: box-shadow 480ms $bezier;
+
+  &:hover {
+    box-shadow: $elevation-center-40;
+  }
+}
+
+
+/* backdrop-filter blur */
+$blur-72: blur(72px);
+$blur-56: blur(56px);
+$blur-40: blur(40px);
+$blur-16: blur(16px);
+$blur-4: blur(4px);
+
+/* background rgba (gradients on figma) */
+
+$rgba-dark-80: rgba(40, 40, 40, 0.8);
+$rgba-dark-60: rgba(40, 40, 40, 0.6);
+$rgba-dark-40: rgba(40, 40, 40, 0.4);
+$rgba-dark-24: rgba(40, 40, 40, 0.24);
+$rgba-dark-16: rgba(40, 40, 40, 0.16);
+$rgba-dark-8: rgba(40, 40, 40, 0.08);
+$rgba-dark-4: rgba(40, 40, 40, 0.04);
+
+$rgba-light-80: rgba(255, 255, 255, 0.8);
+$rgba-light-60: rgba(255, 255, 255, 0.6);
+$rgba-light-40: rgba(255, 255, 255, 0.4);
+$rgba-light-24: rgba(255, 255, 255, 0.24);
+$rgba-light-16: rgba(255, 255, 255, 0.16);
+$rgba-light-8: rgba(255, 255, 255, 0.08);
+$rgba-light-4: rgba(255, 255, 255, 0.04);
+
+/* overlay */
+
+@mixin overlay-dark-72 {
+  background: $rgba-dark-60;
+  backdrop-filter: $blur-72;
+  transition: $transitionOverlay;
+}
+
+@mixin overlay-dark-56 {
+  background: $rgba-dark-60;
+  backdrop-filter: $blur-56;
+  transition: $transitionOverlay;
+}
+
+@mixin overlay-dark-40 {
+  background: $rgba-dark-60;
+  backdrop-filter: $blur-40;
+  transition: $transitionOverlay;
+}
+
+@mixin overlay-dark-16 {
+  background: $rgba-dark-60;
+  backdrop-filter: $blur-16;
+  transition: $transitionOverlay;
+}
+
+@mixin overlay-dark-4 {
+  background: $rgba-dark-60;
+  backdrop-filter: $blur-4;
+  transition: $transitionOverlay;
+}
+
+@mixin overlay-light-72 {
+  background: $rgba-light-60;
+  backdrop-filter: $blur-72;
+  transition: $transitionOverlay;
+}
+
+@mixin overlay-light-56 {
+  background: $rgba-light-60;
+  backdrop-filter: $blur-56;
+  transition: $transitionOverlay;
+}
+
+@mixin overlay-light-40 {
+  background: $rgba-light-60;
+  backdrop-filter: $blur-40;
+  transition: $transitionOverlay;
+}
+
+@mixin overlay-light-16 {
+  background: $rgba-light-60;
+  backdrop-filter: $blur-16;
+  transition: $transitionOverlay;
+}
+
+@mixin overlay-light-4 {
+  background: $rgba-light-60;
+  backdrop-filter: $blur-4;
+  transition: $transitionOverlay;
+}

@@ -1,0 +1,33 @@
+// DEFAULT THEME - Blue
+:root {
+  --maincolor90: var(--blue90);
+  --maincolor80: var(--blue80);
+  --maincolor70: var(--blue70);
+  --maincolor60: var(--blue60);
+  --maincolor50: var(--blue50);
+  --maincolor40: var(--blue40);
+  --maincolor30: var(--blue30);
+  --maincolor20: var(--blue20);
+  --maincolor10: var(--blue10);
+  --maincolor5: var(--blue5);
+  --maincolor0: var(--blue0);
+}
+
+$themes: "blue", "red", "orange", "purple", "green", "cyan";
+
+@each $theme in $themes {
+
+  [theme="#{$theme}"]{
+    --maincolor90: var(--#{$theme}90);
+    --maincolor80: var(--#{$theme}80);
+    --maincolor70: var(--#{$theme}70);
+    --maincolor60: var(--#{$theme}60);
+    --maincolor50: var(--#{$theme}50);
+    --maincolor40: var(--#{$theme}40);
+    --maincolor30: var(--#{$theme}30);
+    --maincolor20: var(--#{$theme}20);
+    --maincolor10: var(--#{$theme}10);
+    --maincolor5: var(--#{$theme}5);
+    --maincolor0: var(--#{$theme}0);
+  }
+}

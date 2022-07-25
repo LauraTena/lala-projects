@@ -1,0 +1,133 @@
+// font all properties
+
+@mixin font($s, $lh, $w, $c) {
+    
+    font-size: $s;
+    line-height: $lh;
+    font-weight: $w;
+    color: $c;
+}
+
+// truncate styles by ellipsis
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// scrollbar
+
+@mixin scrollbar($scrollbar: $grey40, $size: 10px, $thumb: $grey50, $radius: 0, $border: none) {
+	&::-webkit-scrollbar {
+		background: $scrollbar;
+		-webkit-appearance: none;
+		width: $size;
+		height: $size;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 0;
+		background-color: $thumb;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    border-radius: $radius;
+    border: $border;
+	}	
+  @include hack-firefox { 
+    scrollbar-width: thin; // width: 9px
+  }
+}
+
+@mixin scrollbar-hidden {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+  @include hack-firefox { 
+    scrollbar-width: none;
+  }
+}
+
+@mixin scrollbar-visible {
+  &::-webkit-scrollbar {
+    display: block;
+  }
+
+  @include hack-firefox { 
+    scrollbar-width: thin;
+  }
+}
+
+@mixin scrollbar-transparent {
+	&::-webkit-scrollbar {
+		background: transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: transparent;
+	}	
+}
+
+
+// line clamp
+
+@mixin clamp($lines){
+	  display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    -moz-line-clamp: $lines;
+    -moz-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin noClamp(){
+	display: block;
+  max-width: 100%;
+  -webkit-line-clamp: none;
+  -moz-line-clamp: none;
+  line-clamp: none;
+}
+
+// columns
+
+@mixin columns($number, $gap) {
+  -webkit-column-count: $number; 
+  -moz-column-count: $number; 
+  column-count: $number;
+  -webkit-column-count: $gap; 
+  -moz-column-count: $gap;
+  column-gap: $gap,
+}
+
+// input placeholder
+
+@mixin placeholder($color, $fontSize) {
+	&::-webkit-input-placeholder {
+		color: $color;
+		font-size: $fontSize;
+	}
+	&:-moz-placeholder {
+		color: $color;
+		font-size: $fontSize;
+	}
+	:-ms-input-placeholder {
+		color: $color;
+		font-size: $fontSize;
+	}	
+}
+
+// mixin used to resize the image in the component FileUpload
+
+@mixin fileUploadImageSize($width: 60) {
+  width: #{$width}px;
+  max-height: #{$width}px;
+
+  &--portrait {
+    height: #{$width}px;
+
+    .FileUpload__image {
+      width: auto;
+      height: 100%;
+      transform: translateX(calc(#{$width / 2}px - 50%));
+    }
+  }
+}

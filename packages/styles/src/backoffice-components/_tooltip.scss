@@ -1,0 +1,25 @@
+.Tooltip.Tooltip {
+  border-radius: 3px;
+
+  &--dark {
+    background: $black;
+
+    .Tooltip {
+
+      &__arrow {
+
+        &:after {
+          color: $black;
+          content: "\e983";
+        }
+      }
+
+      &__title,
+      &__content,
+      &__content:before {
+        color: $white;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+  }
+}

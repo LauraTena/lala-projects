@@ -1,0 +1,76 @@
+@function getGridWidth($col: 12, $gap: 32, $fullWidth: 100, $widthUnit: vw, $selectionCol: 6, $gapLeft: true, $gapRight: true, $returnNegative: false, $noGapsEndsGrid: false) {
+  /*
+    get total width based on selected columns of total columns
+  */
+  $totalCol: ($fullWidth / $col) * $selectionCol;
+  /*
+    total gaps is total columns + 1, we need to consider the proportional part of this extra gap (in px)
+  */
+  $extraGapAdjustmentPx: ($gap * $selectionCol / $col) + px;
+  /*
+    in case we are taking as reference a grid without gap in the ends, total gaps is total columns - 1
+  */
+  $noGapEndsGridAdjustmentPx: ($gap * $selectionCol / $col) + px;
+
+  /*
+    the selection could have:
+    gap on left or right,
+    gap on left and right,
+    no gap on left and no gap right
+  */
+  $endsGapsAdjustments: 0;
+
+  /* gap on left and right */
+  @if $gapLeft == true and $gapRight == true {
+    $endsGapsAdjustments: -$gap
+  /* no gap on left and no gap right */
+  } @else if $gapLeft == false and $gapRight == false {
+    $endsGapsAdjustments: $gap;
+  /* gap on left or right */
+  } @else {
+    $endsGapsAdjustments: 0;
+  }
+
+  /*
+    we need to set the units for each measure:
+    $endsGapsAdjustments will be defined always in px
+    $totalCol widht will be defined by the param $widthUnit
+  */
+  $totalWidthUnit: #{$totalCol} + #{$widthUnit};
+  $endsGapsAdjustmentsPx: $endsGapsAdjustments + px;
+
+  /*
+    to calculate final width we have o substract to the total width the adjustment for the extra gap and the gap adjustment base on the gaps at the ends
+  */
+  $width: 0;
+
+  @if $noGapsEndsGrid == true {
+    $width: calc(#{$totalWidthUnit} + #{$noGapEndsGridAdjustmentPx} - #{$endsGapsAdjustmentsPx});
+  } @else {
+    $width: calc(#{$totalWidthUnit} - #{$extraGapAdjustmentPx} - #{$endsGapsAdjustmentsPx});
+  }
+
+  /*
+    some cases we will need the inverse of this width (for instance, side-panel, to hide an element with right = -$width)
+  */
+  $widthNegative: 0;
+
+  @if $noGapsEndsGrid == true {
+    $widthNegative: calc(-#{$totalWidthUnit} - #{$noGapEndsGridAdjustmentPx} + #{$endsGapsAdjustmentsPx});
+  } @else {
+    $widthNegative: calc(-#{$totalWidthUnit} + #{$extraGapAdjustmentPx} + #{$endsGapsAdjustmentsPx});
+  }
+
+  @if $returnNegative == true {
+    @return $widthNegative;
+  } @else {
+    @return $width;
+  }
+}
+
+@function customLighten($color-variable, $value) {
+  $color-variable-h: var(#{$color-variable + "-h"});
+  $color-variable-s: var(#{$color-variable + "-s"});
+  $color-variable-l: calc(var(#{$color-variable + "-l"}) - #{$value});
+  @return hsl($color-variable-h, $color-variable-s, $color-variable-l);
+}

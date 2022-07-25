@@ -1,0 +1,35 @@
+@mixin layoutMainContainerOnlyDesktop {
+  width: 100%;
+  max-width: calc(var(--layout-max-width-px) * 1px);
+  margin: 0 auto;
+}
+
+@mixin layoutMainContainer {
+  @include layoutMainContainerOnlyDesktop;
+
+  @media #{$break-md} {
+    max-width: var(--layout-col-20);
+  }
+
+  @media #{$break-sm} {
+    max-width: var(--layout-col-14);
+  }
+
+  @media #{$break-xs} {
+    max-width: calc(100% - 32px);
+  }
+}
+
+@mixin pageWrapper {
+  @include layoutMainContainerOnlyDesktop;
+  padding: 0 calc(var(--layout-col-2) + var(--layout-gap) + var(--layout-gap));
+  box-sizing: border-box;
+
+  @media #{$break-sm} {
+    padding: 0 calc(var(--layout-col-1) + (var(--layout-gap) * 2));
+  }
+
+  @media #{$break-xs} {
+    padding: 0 16px;
+  }
+}

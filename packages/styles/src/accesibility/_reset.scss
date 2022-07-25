@@ -1,0 +1,39 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: inherit;
+}
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  border: 0;
+  background: none;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+figure {
+  margin: 0;
+}

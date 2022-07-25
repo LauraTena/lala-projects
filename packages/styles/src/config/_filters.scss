@@ -1,0 +1,27 @@
+/* filters */ 
+//properties to be used over black elements
+
+$filter-air: invert(43%) sepia(35%) saturate(3209%) hue-rotate(165deg) brightness(97%) contrast(101%);
+
+$filter-carbon: invert(0%) sepia(85%) saturate(27%) hue-rotate(13deg) brightness(93%) contrast(98%);
+$filter-grey55: invert(36%) sepia(0%) saturate(397%) hue-rotate(180deg) brightness(83%) contrast(82%);
+$filter-grey77: invert(73%) sepia(0%) saturate(243%) hue-rotate(168deg) brightness(84%) contrast(89%);
+$filter-grey99: invert(51%) sepia(0%) saturate(62%) hue-rotate(187deg) brightness(91%) contrast(91%);
+
+$filter-greyBA:invert(85%) sepia(1%) saturate(0%) hue-rotate(353deg) brightness(88%) contrast(93%);
+$filter-greyDA: invert(99%) sepia(0%) saturate(0%) hue-rotate(167deg) brightness(88%) contrast(96%);
+
+$filter-greyFA: invert(99%) sepia(58%) saturate(0%) hue-rotate(48deg) brightness(105%) contrast(96%);
+$filter-greyF0: invert(99%) sepia(3%) saturate(477%) hue-rotate(248deg) brightness(115%) contrast(88%);	
+$filter-greyF5: invert(100%) sepia(80%) saturate(2%) hue-rotate(2deg) brightness(111%) contrast(92%);
+
+$filter-white: invert(96%) sepia(84%) saturate(5%) hue-rotate(82deg) brightness(110%) contrast(100%);
+
+$filter-aqua: invert(69%) sepia(47%) saturate(571%) hue-rotate(132deg) brightness(83%) contrast(90%);
+$filter-cell: invert(69%) sepia(41%) saturate(674%) hue-rotate(38deg) brightness(97%) contrast(81%);
+$filter-star: invert(51%) sepia(89%) saturate(597%) hue-rotate(2deg) brightness(99%) contrast(102%);
+$filter-fire: invert(23%) sepia(96%) saturate(4903%) hue-rotate(343deg) brightness(84%) contrast(116%);
+$filter-energy: invert(84%) sepia(24%) saturate(3163%) hue-rotate(5deg) brightness(99%) contrast(105%);
+$filter-bio: invert(39%) sepia(69%) saturate(369%) hue-rotate(83deg) brightness(98%) contrast(90%);
+$filter-holy: invert(23%) sepia(47%) saturate(1179%) hue-rotate(233deg) brightness(86%) contrast(95%);
+$filter-cosmos: invert(61%) sepia(79%) saturate(6776%) hue-rotate(171deg) brightness(96%) contrast(101%);

@@ -1,0 +1,11 @@
+@mixin ppLinkStyle {
+  color: var(--maincolor50);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 300ms $bezier;
+
+  &:hover {
+    color: var(--maincolor70);
+  }
+}

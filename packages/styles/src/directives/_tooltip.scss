@@ -1,0 +1,71 @@
+.TooltipD {
+  position: fixed;
+  padding: 8px 3px;
+  background: $black;
+  @include f-12-500;
+  color: $white;
+  width: auto;
+  max-width: 360px;
+  box-shadow: $elevation-center-40;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 3px 8px;
+  opacity: 0;
+  transition: opacity 240ms $bezier;
+  z-index: 2000;
+
+  &:after {
+    content: "\e984";
+    font-family: $fontIcon;
+    color: $black;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: -10px;
+    right: calc(50% - 8px);
+  }
+
+  &--bottom {
+    &:after {
+      transform: rotate(180deg);
+      top: -10px;
+      bottom: auto;
+    }
+  }
+
+  &--right {
+    &:after {
+      right: 12px;
+    }
+  }
+
+  &--left {
+    &:after {
+      left: 12px;
+      right: auto;
+    }
+  }
+
+  &--side {
+    &.TooltipD {
+      &--left {
+        &:after {
+          transform: rotate(-90deg);
+          right: -10px;
+          left: auto;
+          bottom: calc(50% - 8px);
+        }
+      }
+
+      &--right {
+        &:after {
+          transform: rotate(90deg);
+          left: -10px;
+          right: auto;
+          bottom: calc(50% - 8px);
+        }
+      }
+    }
+  }
+}
