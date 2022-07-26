@@ -1,10 +1,10 @@
 <template>
   <h3>Home</h3>
-  <Counter />
+  <Store />
 </template>
 
 <script setup lang="ts">
-import Counter from "../components/Counter.vue";
+import Store from "../components/Store.vue";
 </script>
 
 <style lang="scss">

@@ -16,6 +16,6 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/core/canvas/GenerateSvg.js"
+    "src/core/canvas/GenerateCanvas.js"
   ]
 }

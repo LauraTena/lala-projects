@@ -1,3 +1,3 @@
-import GenerateSvg from "./GenerateSvg";
+import GenerateCanvas from "./GenerateCanvas";
 import GetSvgOptions from "./GetSvgOptions";
-export { GenerateSvg, GetSvgOptions };
+export { GenerateCanvas, GetSvgOptions };
