@@ -234,6 +234,11 @@ var require_jelly = __commonJS({
           this.o[i].image = img;
         },
 
+        setTrack: function (i, track) {
+          this.o[i].track = track;
+          this.updateImage(i, track.img_md);
+        },
+
         shake: function (options) {
           var that = this;
           this.promise.then(function () {
@@ -325,6 +330,10 @@ var require_jelly = __commonJS({
               clearInterval(animation);
             }
           }, 8);
+        },
+
+        toggle: function (i, alpha) {
+          this.o[i].alpha = alpha;
         },
 
         animate: function (options, hide) {

@@ -1,5 +1,4 @@
 <template>
-  <h3>Home</h3>
   <Counter />
 </template>
 

@@ -1,6 +1,6 @@
 import Jelly from "./jelly/jelly";
 
-export default function GenerateCanvas(svg, canvas, options) {
+export default function GenerateCanvas(svg, canvas, options, playlist) {
   const svgWidth = options.width ? options.width : window.innerWidth;
   const svgHeight = options.height ? options.height : window.innerHeight;
   const size = options.size ? options.size : 200;
@@ -17,7 +17,7 @@ export default function GenerateCanvas(svg, canvas, options) {
 
   svg.innerHTML = "";
 
-  for (var i = 0; i < totalY; i++) {
+  for (let i = 0; i < totalY; i++) {
     for (var j = 0; j < totalX; j++) {
       const posX = margin + size * j - gridXAdjustment;
       const posY = margin + size * i - gridYAdjustment;
@@ -37,17 +37,13 @@ export default function GenerateCanvas(svg, canvas, options) {
 
   const jellyOptions = [];
 
-  for (var i = 0; i < totalY; i++) {
+  for (let i = 0; i < totalY; i++) {
     for (var j = 0; j < totalX; j++) {
       var optionsTest0 = {
         paths: `.square-x-${i}-y-${j}`, // Shape we want to draw
         pointsNumber: 20, // Number of points
         maxDistance: -3000, // Max distance among points
         color: "red",
-        image:
-          j < 3
-            ? ""
-            : "https://cdn.dribbble.com/users/1433291/screenshots/15541759/media/0ca7c78ccbeb259addbda44879e8bf51.jpg?compress=1&resize=400x300&vertical=top",
         imageWidth: size,
         imageHeight: size,
         imageCentroid: true,
@@ -59,5 +55,53 @@ export default function GenerateCanvas(svg, canvas, options) {
     }
   }
 
+  const container = document.querySelector(".jelly-container");
+  let hoverIndex = -1;
+  let current = -1;
+
   const jelly = new Jelly(canvas, jellyOptions);
+  function checkHover() {
+    // The `getHoverIndex` function will return the index of the shape being hovered, or -1
+    hoverIndex = jelly.getHoverIndex();
+    container.style.cursor = hoverIndex === -1 ? "default" : "pointer";
+    window.requestAnimationFrame(checkHover);
+  }
+  window.requestAnimationFrame(checkHover);
+
+  canvas.addEventListener("click", function () {
+    current = hoverIndex;
+    if (current >= 0) {
+      jelly.hide({ i: hoverIndex, maxDelay: 0 });
+    }
+  });
+
+  function initRandomize(n) {
+    jelly.o.forEach((option, i) => {
+      jelly.setTrack(i, playlist[i * n]);
+    });
+  }
+
+  function generateRandom(maxLimit = playlist.length - 1) {
+    let rand = Math.random() * maxLimit;
+    rand = Math.floor(rand); // 99
+
+    return rand;
+  }
+
+  const totalCovers = totalX * totalY;
+
+  function randomize(timer) {
+    if (timer < 6000) {
+      jelly.setTrack(generateRandom(totalCovers), playlist[generateRandom()]);
+      jelly.toggle(generateRandom(totalCovers), Math.round(Math.random()));
+      jelly.setTrack(generateRandom(totalCovers), playlist[generateRandom()]);
+      jelly.toggle(generateRandom(totalCovers), Math.round(Math.random()));
+      jelly.setTrack(generateRandom(totalCovers), playlist[generateRandom()]);
+      jelly.toggle(generateRandom(totalCovers), Math.round(Math.random()));
+    }
+    window.requestAnimationFrame(randomize);
+  }
+  window.requestAnimationFrame(randomize);
+
+  initRandomize(1);
 }

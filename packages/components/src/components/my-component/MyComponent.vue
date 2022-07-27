@@ -10,9 +10,7 @@ function increment() {
 }
 
 // lifecycle hooks
-onMounted(() => {
-  console.log(`The initial count is ${count.value}.`);
-});
+onMounted(() => {});
 </script>
 
 <template>
