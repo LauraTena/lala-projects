@@ -564,7 +564,6 @@ var require_jelly = __commonJS({
           return -1;
         }
       };
-      console.log(Jelly);
       return Jelly;
     });
   }

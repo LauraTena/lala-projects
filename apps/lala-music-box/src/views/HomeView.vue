@@ -1,11 +1,9 @@
 <template>
   <svg ref="svg" xmlns="http://www.w3.org/2000/svg"></svg>
   <canvas ref="canvas"></canvas>
-  <Counter />
 </template>
 
 <script lang="ts">
-import Counter from "../components/Counter.vue";
 import { defineComponent } from "vue";
 import { GenerateCanvas, GetSvgOptions } from "../core/canvas";
 

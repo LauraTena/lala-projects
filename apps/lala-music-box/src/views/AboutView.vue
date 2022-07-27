@@ -1,55 +1,25 @@
 <template>
-  <h3>About</h3>
+  <h3>Home</h3>
+  <Counter />
 </template>
 
-<script lang="js">
-import { defineComponent } from "vue";
-import { Buffer } from "buffer";
+<script setup lang="ts">
+import Counter from "../components/Counter.vue";
+import { onMounted } from "vue";
 
-const clientId = import.meta.env.VITE_APP_CLIENT_ID;
-const clientSecret = import.meta.env.VITE_APP_CLIENT_SECRET;
-
-export default defineComponent({
-  mounted() {
-    const requestPost = new Request('https://accounts.spotify.com/api/token', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded',
-        Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
-      },
-      body: 'grant_type=client_credentials',
-    });
-
-    const requestGet = (accessToken) => new Request(`https://api.spotify.com/v1/playlists/7vZzgb5MvHRW1nyUU5P3js/tracks`, {
-      method: 'GET',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
-
-    fetch(requestPost)
-      .then(async (response) => {
-        const res = await response.json();
-        const accessToken = res.access_token;
-
-        fetch(requestGet(accessToken))
-          .then(async (responseGet) => {
-            await responseGet.json()
-              .then((data) => {
-                console.log(data.items)
-              });
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
+onMounted(async () => {
+  console.log("lala");
 });
 </script>
-<style></style>
+
+<style lang="scss">
+body {
+  user-select: none;
+  padding: 38px;
+  background: pink;
+
+  h6 {
+    color: grey;
+  }
+}
+</style>
