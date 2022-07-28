@@ -18,7 +18,7 @@ export default function GenerateCanvas(svg, canvas, options, playlist) {
   svg.innerHTML = "";
 
   for (let i = 0; i < totalY; i++) {
-    for (var j = 0; j < totalX; j++) {
+    for (let j = 0; j < totalX; j++) {
       const posX = margin + size * j - gridXAdjustment;
       const posY = margin + size * i - gridYAdjustment;
       const rect = document.createElementNS(
@@ -38,8 +38,8 @@ export default function GenerateCanvas(svg, canvas, options, playlist) {
   const jellyOptions = [];
 
   for (let i = 0; i < totalY; i++) {
-    for (var j = 0; j < totalX; j++) {
-      var optionsTest0 = {
+    for (let j = 0; j < totalX; j++) {
+      const options = {
         paths: `.square-x-${i}-y-${j}`, // Shape we want to draw
         pointsNumber: 20, // Number of points
         maxDistance: -3000, // Max distance among points
@@ -51,7 +51,7 @@ export default function GenerateCanvas(svg, canvas, options, playlist) {
         index: i,
         alpha: 1
       };
-      jellyOptions.push(optionsTest0);
+      jellyOptions.push(options);
     }
   }
 

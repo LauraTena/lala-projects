@@ -1,31 +1,36 @@
-const mapArtist = (artist) => ({
+const mappingArtist = (artist) => ({
   name: artist.name,
   id: artist.id
 });
 
-const mapPlaylist = (data) => ({
-  album: {
-    id: data.album.id,
-    name: data.album.name,
-    release: data.album.release_date,
-    type: data.album.type,
-    total_tracks: data.album.total_tracks,
-    uri: data.album.uri
-  },
-  img_md: data.album.images[1].url,
-  img_hd: data.album.images[0].url,
-  artists: data.artists.map((x) => mapArtist(x)),
-  artistsString: data.artists.map((x) => x.name).join(", "),
-  track: {
-    id: data.id,
-    name: data.name,
-    duration_ms: data.duration_ms,
-    popularity: data.popularity,
-    preview_url: data.preview_url,
-    number: data.track_number,
-    uri: data.uri
-  },
-  visible: false
-});
+const mappingPlaylist = (playlist) => {
+  const mappedData = playlist.map((x: any) => {
+    return {
+      album: {
+        id: x.track.album.id,
+        name: x.track.album.name,
+        release: x.track.album.release_date,
+        type: x.track.album.type,
+        total_tracks: x.track.album.total_tracks,
+        uri: x.track.album.uri
+      },
+      img_md: x.track.album.images[1].url,
+      img_hd: x.track.album.images[0].url,
+      artists: x.track.artists,
+      artistsString: x.track.artists,
+      track: {
+        id: x.track.id,
+        name: x.track.name,
+        duration_ms: x.track.duration_ms,
+        popularity: x.track.popularity,
+        preview_url: x.track.preview_url,
+        number: x.track.track_number,
+        uri: x.track.uri
+      },
+      visible: false
+    };
+  });
+  return mappedData;
+};
 
-export { mapPlaylist };
+export { mappingArtist, mappingPlaylist };

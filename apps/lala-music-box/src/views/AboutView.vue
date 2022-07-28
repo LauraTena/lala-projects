@@ -1,24 +1,11 @@
 <template>
-  <Counter />
+  <h4>About</h4>
 </template>
 
 <script setup lang="ts">
-import Counter from "../components/Counter.vue";
 import { onMounted } from "vue";
 
 onMounted(async () => {
-  console.log("lala");
+  console.log("About");
 });
 </script>
-
-<style lang="scss">
-body {
-  user-select: none;
-  padding: 38px;
-  background: pink;
-
-  h6 {
-    color: grey;
-  }
-}
-</style>

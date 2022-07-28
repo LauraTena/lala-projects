@@ -13,10 +13,15 @@ import { GenerateCanvas, GetSvgOptions } from "../core/canvas";
 const store = useHomeStore();
 
 const fetchPlaylist = async () => {
-  await store.fetchPlaylist();
+  try {
+    await store.fetchPlaylist();
+    initCanvas();
+  } finally {
+    console.log("ddd");
+  }
 };
 
-const initCanvas = async () => {
+const initCanvas = () => {
   const svg = document.getElementById("svg");
   const canvas = document.getElementById("canvas");
   GenerateCanvas(svg, canvas, GetSvgOptions(), store.playlist);
@@ -24,9 +29,6 @@ const initCanvas = async () => {
 
 onMounted(() => {
   fetchPlaylist();
-  setTimeout(() => {
-    initCanvas();
-  }, 1000);
 });
 </script>
 

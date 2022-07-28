@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { __commonJS } from "./chunk-HCVJ73NG";
 
 var require_jelly = __commonJS({
