@@ -1,6 +1,6 @@
 {
   "name": "@lau.ra/styles",
-  "description": "This package provides the SASS configuration files to create Frontiers public pages. It provides: variables, mixins, icons, layout styles, etc.",
+  "description": "",
   "author": "lau.ra tena",
   "license": "MIT",
   "keywords": [
@@ -16,6 +16,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://devops-server.frontiersin.net/Design/Styles/_git/SassPublicPages"
+    "url": ""
   }
 }

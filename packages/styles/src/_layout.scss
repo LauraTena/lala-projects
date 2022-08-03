@@ -1,14 +1,55 @@
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
-body, html {
-	margin: 0;
-	padding: 0;
-	font-family: $museoSans;
-  color: $black;
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-base);
 }
 
-.l-spacer {
-	flex-grow: 1;
+$font-sizes-rules: (
+  "p": 0,
+  "h6": 1,
+  "h5": 2,
+  "h4": 3,
+  "h3": 4,
+  "h2": 5,
+  "h1": 6
+);
+
+
+
+@each $selector, $increase in $font-sizes-rules {
+  #{$selector},
+  .f-size-#{$selector} {
+    @if $selector == "p" {
+      font-size: getRemFromPx(#{var(--font-size-base)});
+    } @else {
+      font-size: calc(var(--font-size-base) * var(--font-rule) * $increase);
+    }
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-primary);
+}
+
+.l-flex {
+  display: flex;
+
+  &-row {
+    @extend .l-flex;
+    flex-direction: row;
+  }
+
+  &-grow {
+    display: flex;
+    flex-direction: row;
+  }
 }

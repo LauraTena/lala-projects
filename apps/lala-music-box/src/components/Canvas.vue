@@ -1,35 +1,43 @@
 <template>
-  <svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+  <svg ref="svg" xmlns="http://www.w3.org/2000/svg"></svg>
   <div class="jelly-container">
-    <canvas id="canvas"></canvas>
+    <canvas ref="canvas"></canvas>
   </div>
 </template>
 
-<script setup lang="ts">
-import { onMounted } from "vue";
+<script>
+import { ref, onMounted } from "vue";
 import { useHomeStore } from "../stores/home";
 import { GenerateCanvas, GetSvgOptions } from "../core/canvas";
 
-const store = useHomeStore();
+export default {
+  name: "CanvasComponent",
+  setup(props, context) {
+    const svg = ref(null);
+    const canvas = ref(null);
 
-const fetchPlaylist = async () => {
-  try {
-    await store.fetchPlaylist();
-    initCanvas();
-  } finally {
-    console.log("ddd");
+    const store = useHomeStore();
+
+    const fetchPlaylist = async () => {
+      try {
+        await store.fetchPlaylist();
+        initCanvas();
+      } finally {
+        console.log("ddd");
+      }
+    };
+
+    const initCanvas = () => {
+      GenerateCanvas(svg.value, canvas.value, GetSvgOptions(), store.playlist);
+    };
+
+    onMounted(() => {
+      fetchPlaylist();
+    });
+
+    return { svg, canvas };
   }
 };
-
-const initCanvas = () => {
-  const svg = document.getElementById("svg");
-  const canvas = document.getElementById("canvas");
-  GenerateCanvas(svg, canvas, GetSvgOptions(), store.playlist);
-};
-
-onMounted(() => {
-  fetchPlaylist();
-});
 </script>
 
 <style lang="scss" scoped>

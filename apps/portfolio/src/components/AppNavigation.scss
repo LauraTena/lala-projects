@@ -1,0 +1,23 @@
+@import url("../../../../packages/styles/src/config/config.scss");
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 64px;
+  height: 64px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &__logo {
+    font-family: var(--font-family-primary);
+    font-size: getRem(36px);
+  }
+
+  &__item {
+    font-family: var(--font-family-primary);
+  }
+}

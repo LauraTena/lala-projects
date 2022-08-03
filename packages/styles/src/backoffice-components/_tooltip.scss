@@ -2,14 +2,12 @@
   border-radius: 3px;
 
   &--dark {
-    background: $black;
+    background: var(--color-text);
 
     .Tooltip {
-
       &__arrow {
-
         &:after {
-          color: $black;
+          color: var(--color-text);
           content: "\e983";
         }
       }
@@ -17,7 +15,7 @@
       &__title,
       &__content,
       &__content:before {
-        color: $white;
+        color: var(--color-bg);
         -webkit-font-smoothing: antialiased;
       }
     }

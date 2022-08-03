@@ -1,150 +1,155 @@
 $modifiers: (
-  'arrowRight': '\e90b',
-  'arrowLeft': '\e910',
-  'chevronDown': '\e90c',
-  'chevronLeft': '\e90d',
-  'chevronRight': '\e90e',
-  'chevronUp': '\e90f',
-  'newsletter': '\e936',
-  'search': '\e940',
-  'user': '\e900',
-  'location': '\e901',
-  'Institution': '\e902',
-  'twitter': '\e903',
-  'linkedin': '\e904',
-  'instagram': '\e905',
-  'facebook': '\e906',
-  'burgerMenu': '\e907',
-  'check': '\e908',
-  'close': '\e909',
-  'closeCircle': '\e90a',
-  'collapse': '\e911',
-  'expand': '\e912',
-  'externalLink': '\e913',
-  'filters': '\e914',
-  'home': '\e915',
-  'spinner': '\e916',
-  'reload': '\e917',
-  'chevronUpCircle': '\e918',
-  'chevronUpCircleFill': '\e919',
-  'chevronRightCircle': '\e91a',
-  'chevronRightCircleFill': '\e91b',
-  'chevronLeftCircle': '\e91c',
-  'chevronLeftCircleFill': '\e91d',
-  'chevronDownCircle': '\e91e',
-  'chevronDownCircleFill': '\e91f',
-  'arrowUpCircle': '\e920',
-  'arrowUpCircleFill': '\e921',
-  'arrowRightCircle': '\e922',
-  'arrowRightCircleFill': '\e923',
-  'arrowLeftCircle': '\e924',
-  'arrowLeftCircleFill': '\e925',
-  'arrowDownCircle': '\e926',
-  'arrowDownCircleFill': '\e927',
-  'view': '\e928',
-  'viewFill': '\e929',
-  'userFill': '\e92a',
-  'star': '\e92b',
-  'starFill': '\e92c',
-  'sort': '\e92d',
-  'sortDescending': '\e92e',
-  'sortAscending': '\e92f',
-  'share': '\e930',
-  'shareFill': '\e931',
-  'setting': '\e932',
-  'settingFill': '\e933',
-  'send': '\e934',
-  'sendFill': '\e935',
-  'rss': '\e937',
-  'rssFill': '\e938',
-  'reviewForum': '\e939',
-  'reviewForumFill': '\e93a',
-  'researchTopics': '\e93b',
-  'researchTopicsFill': '\e93c',
-  'quote': '\e93d',
-  'quoteFill': '\e93e',
-  'public': '\e93f',
-  'publicFill': '\e941',
-  'locationFill': '\e942',
-  'paper': '\e943',
-  'paperFill': '\e944',
-  'externalLinkFill': '\e945',
-  'notification': '\e946',
-  'notificationFill': '\e947',
-  'moreOptionsVertical': '\e948',
-  'moreOptionsHorizontal': '\e949',
-  'moreCircle': '\e94a',
-  'list': '\e94b',
-  'link': '\e94c',
-  'laptop': '\e94d',
-  'laptopFill': '\e94e',
-  'info': '\e94f',
-  'infoFill': '\e950',
-  'image': '\e951',
-  'imageFill': '\e952',
-  'help': '\e953',
-  'helpFill': '\e954',
-  'group': '\e955',
-  'groupFill': '\e956',
-  'institutionFill': '\e957',
-  'flag': '\e958',
-  'flagFill': '\e959',
-  'filtersFill': '\e95a',
-  'files': '\e95b',
-  'filesFill': '\e95c',
-  'favorite': '\e95d',
-  'favoriteFill': '\e95e',
-  'newsletterFill': '\e95f',
-  'eBook': '\e960',
-  'eBookFill': '\e961',
-  'download': '\e962',
-  'desktop': '\e963',
-  'desktopFill': '\e964',
-  'delete': '\e965',
-  'deleteFill': '\e966',
-  'cloudDownload': '\e967',
-  'cloudDownloadFill': '\e968',
-  'closeCircleFill': '\e969',
-  'clock': '\e96a',
-  'clockFill': '\e96b',
-  'checkmark': '\e96c',
-  'checkmarkFill': '\e96d',
-  'chat': '\e96e',
-  'chatFill': '\e96f',
-  'chartBar': '\e970',
-  'chartBarFill': '\e971',
-  'calendar': '\e972',
-  'calendarFill': '\e973',
-  'bookmark': '\e974',
-  'bookmarkFill': '\e975',
-  'attachment': '\e976',
-  'article': '\e977',
-  'articleFill': '\e978',
-  'arrowUp': '\e979',
-  'arrowUpRight': '\e97a',
-  'arrowUpLeft': '\e97b',
-  'arrowDown': '\e97c',
-  'arrowDownRight': '\e97d',
-  'arrowDownLeft': '\e97e',
-  'like': '\e97f',
-  'likeFill': '\e980',
-  'alert': '\e981',
-  'alertFill': '\e982',
-  'collapseArrow' : '\e983',
-  'expandArrow' : '\e984',
-  'graphLine': '\e985',
-  'productHub': '\e986',
+  "arrowRight": "\e90b",
+  "arrowLeft": "\e910",
+  "chevronDown": "\e90c",
+  "chevronLeft": "\e90d",
+  "chevronRight": "\e90e",
+  "chevronUp": "\e90f",
+  "newsletter": "\e936",
+  "search": "\e940",
+  "user": "\e900",
+  "location": "\e901",
+  "Institution": "\e902",
+  "twitter": "\e903",
+  "linkedin": "\e904",
+  "instagram": "\e905",
+  "facebook": "\e906",
+  "burgerMenu": "\e907",
+  "check": "\e908",
+  "close": "\e909",
+  "closeCircle": "\e90a",
+  "collapse": "\e911",
+  "expand": "\e912",
+  "externalLink": "\e913",
+  "filters": "\e914",
+  "home": "\e915",
+  "spinner": "\e916",
+  "reload": "\e917",
+  "chevronUpCircle": "\e918",
+  "chevronUpCircleFill": "\e919",
+  "chevronRightCircle": "\e91a",
+  "chevronRightCircleFill": "\e91b",
+  "chevronLeftCircle": "\e91c",
+  "chevronLeftCircleFill": "\e91d",
+  "chevronDownCircle": "\e91e",
+  "chevronDownCircleFill": "\e91f",
+  "arrowUpCircle": "\e920",
+  "arrowUpCircleFill": "\e921",
+  "arrowRightCircle": "\e922",
+  "arrowRightCircleFill": "\e923",
+  "arrowLeftCircle": "\e924",
+  "arrowLeftCircleFill": "\e925",
+  "arrowDownCircle": "\e926",
+  "arrowDownCircleFill": "\e927",
+  "view": "\e928",
+  "viewFill": "\e929",
+  "userFill": "\e92a",
+  "star": "\e92b",
+  "starFill": "\e92c",
+  "sort": "\e92d",
+  "sortDescending": "\e92e",
+  "sortAscending": "\e92f",
+  "share": "\e930",
+  "shareFill": "\e931",
+  "setting": "\e932",
+  "settingFill": "\e933",
+  "send": "\e934",
+  "sendFill": "\e935",
+  "rss": "\e937",
+  "rssFill": "\e938",
+  "reviewForum": "\e939",
+  "reviewForumFill": "\e93a",
+  "researchTopics": "\e93b",
+  "researchTopicsFill": "\e93c",
+  "quote": "\e93d",
+  "quoteFill": "\e93e",
+  "public": "\e93f",
+  "publicFill": "\e941",
+  "locationFill": "\e942",
+  "paper": "\e943",
+  "paperFill": "\e944",
+  "externalLinkFill": "\e945",
+  "notification": "\e946",
+  "notificationFill": "\e947",
+  "moreOptionsVertical": "\e948",
+  "moreOptionsHorizontal": "\e949",
+  "moreCircle": "\e94a",
+  "list": "\e94b",
+  "link": "\e94c",
+  "laptop": "\e94d",
+  "laptopFill": "\e94e",
+  "info": "\e94f",
+  "infoFill": "\e950",
+  "image": "\e951",
+  "imageFill": "\e952",
+  "help": "\e953",
+  "helpFill": "\e954",
+  "group": "\e955",
+  "groupFill": "\e956",
+  "institutionFill": "\e957",
+  "flag": "\e958",
+  "flagFill": "\e959",
+  "filtersFill": "\e95a",
+  "files": "\e95b",
+  "filesFill": "\e95c",
+  "favorite": "\e95d",
+  "favoriteFill": "\e95e",
+  "newsletterFill": "\e95f",
+  "eBook": "\e960",
+  "eBookFill": "\e961",
+  "download": "\e962",
+  "desktop": "\e963",
+  "desktopFill": "\e964",
+  "delete": "\e965",
+  "deleteFill": "\e966",
+  "cloudDownload": "\e967",
+  "cloudDownloadFill": "\e968",
+  "closeCircleFill": "\e969",
+  "clock": "\e96a",
+  "clockFill": "\e96b",
+  "checkmark": "\e96c",
+  "checkmarkFill": "\e96d",
+  "chat": "\e96e",
+  "chatFill": "\e96f",
+  "chartBar": "\e970",
+  "chartBarFill": "\e971",
+  "calendar": "\e972",
+  "calendarFill": "\e973",
+  "bookmark": "\e974",
+  "bookmarkFill": "\e975",
+  "attachment": "\e976",
+  "article": "\e977",
+  "articleFill": "\e978",
+  "arrowUp": "\e979",
+  "arrowUpRight": "\e97a",
+  "arrowUpLeft": "\e97b",
+  "arrowDown": "\e97c",
+  "arrowDownRight": "\e97d",
+  "arrowDownLeft": "\e97e",
+  "like": "\e97f",
+  "likeFill": "\e980",
+  "alert": "\e981",
+  "alertFill": "\e982",
+  "collapseArrow": "\e983",
+  "expandArrow": "\e984",
+  "graphLine": "\e985",
+  "productHub": "\e986"
 );
 
-
-@mixin modifiersIconsLeft($color: $sky40, $colorHover: $grey50, $colorActive: $sky40, $size: 16, $margin: 4, $padding-left: 10) {
- 
+@mixin modifiersIconsLeft(
+  $color: $sky40,
+  $colorHover: $grey50,
+  $colorActive: $sky40,
+  $size: 16,
+  $margin: 4,
+  $padding-left: 10
+) {
   &--icon {
     position: relative;
     padding-left: ($padding-left + $size + $margin) + px;
-  
-    &:before  {
-      content: '';
+
+    &:before {
+      content: "";
       position: absolute;
       left: $padding-left + px;
       $top: $size/2 + px;
@@ -154,21 +159,18 @@ $modifiers: (
       font-size: $size + px;
       line-height: $size + px;
       color: $color;
-      font-family: $fontIcon;
+      font-family: var(--font-family-icon);
     }
   }
 
   &:hover {
-
-    &:before  {
+    &:before {
       color: $colorHover;
     }
   }
 
   @each $name, $glyph in $modifiers {
-
     &--#{$name} {
-
       &:before {
         content: $glyph;
       }
@@ -176,19 +178,18 @@ $modifiers: (
   }
 
   &--active {
-
-    &:before  {
+    &:before {
       color: $colorActive;
     }
   }
 }
 
 @mixin fontIcon($color: $sky40, $size: 16) {
-  font-family: $fontIcon;
+  font-family: var(--font-family-icon);
   color: $color;
   font-size: $size + px;
   line-height: $size + px;
-  font-weight: 300!important;
+  font-weight: 300 !important;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -199,11 +200,11 @@ $modifiers: (
 
   &:after {
     content: $code;
-    font-family: $fontIcon;
+    font-family: var(--font-family-icon);
     color: $color;
     font-size: $size + px;
     line-height: $size + px;
-    font-weight: 300!important;
+    font-weight: 300 !important;
     width: $size + px;
     height: $size + px;
     position: absolute;

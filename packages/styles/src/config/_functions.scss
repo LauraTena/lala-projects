@@ -1,6 +1,16 @@
 @use "sass:math";
 
-@function getGridWidth($col: 12, $gap: 32, $fullWidth: 100, $widthUnit: vw, $selectionCol: 6, $gapLeft: true, $gapRight: true, $returnNegative: false, $noGapsEndsGrid: false) {
+@function getGridWidth(
+  $col: 12,
+  $gap: 32,
+  $fullWidth: 100,
+  $widthUnit: vw,
+  $selectionCol: 6,
+  $gapLeft: true,
+  $gapRight: true,
+  $returnNegative: false,
+  $noGapsEndsGrid: false
+) {
   /*
     get total width based on selected columns of total columns
   */
@@ -24,11 +34,11 @@
 
   /* gap on left and right */
   @if $gapLeft == true and $gapRight == true {
-    $endsGapsAdjustments: -$gap
-  /* no gap on left and no gap right */
+    $endsGapsAdjustments: -$gap;
+    /* no gap on left and no gap right */
   } @else if $gapLeft == false and $gapRight == false {
     $endsGapsAdjustments: $gap;
-  /* gap on left or right */
+    /* gap on left or right */
   } @else {
     $endsGapsAdjustments: 0;
   }
@@ -47,9 +57,15 @@
   $width: 0;
 
   @if $noGapsEndsGrid == true {
-    $width: calc(#{$totalWidthUnit} + #{$noGapEndsGridAdjustmentPx} - #{$endsGapsAdjustmentsPx});
+    $width: calc(
+      #{$totalWidthUnit} +
+        #{$noGapEndsGridAdjustmentPx} -
+        #{$endsGapsAdjustmentsPx}
+    );
   } @else {
-    $width: calc(#{$totalWidthUnit} - #{$extraGapAdjustmentPx} - #{$endsGapsAdjustmentsPx});
+    $width: calc(
+      #{$totalWidthUnit} - #{$extraGapAdjustmentPx} - #{$endsGapsAdjustmentsPx}
+    );
   }
 
   /*
@@ -58,9 +74,15 @@
   $widthNegative: 0;
 
   @if $noGapsEndsGrid == true {
-    $widthNegative: calc(-#{$totalWidthUnit} - #{$noGapEndsGridAdjustmentPx} + #{$endsGapsAdjustmentsPx});
+    $widthNegative: calc(
+      -#{$totalWidthUnit} -
+        #{$noGapEndsGridAdjustmentPx} +
+        #{$endsGapsAdjustmentsPx}
+    );
   } @else {
-    $widthNegative: calc(-#{$totalWidthUnit} + #{$extraGapAdjustmentPx} + #{$endsGapsAdjustmentsPx});
+    $widthNegative: calc(
+      -#{$totalWidthUnit} + #{$extraGapAdjustmentPx} + #{$endsGapsAdjustmentsPx}
+    );
   }
 
   @if $returnNegative == true {
@@ -75,4 +97,8 @@
   $color-variable-s: var(#{$color-variable + "-s"});
   $color-variable-l: calc(var(#{$color-variable + "-l"}) - #{$value});
   @return hsl($color-variable-h, $color-variable-s, $color-variable-l);
+}
+
+@function getRemFromPx($unit-px: 16px) {
+  @return calc($unit-px / var(--font-size-base) * 1rem);
 }

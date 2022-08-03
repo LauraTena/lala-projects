@@ -20,7 +20,7 @@ export default defineConfig({
   },
   root: "",
   build: {
-    outDir: "../portfolio/projects/docs"
+    outDir: "../portfolio/projects/template"
   },
   // eslint-disable-next-line no-undef
   base: process.env.NODE_ENV === "production" ? "./" : "/"

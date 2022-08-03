@@ -1,9 +1,8 @@
 .TooltipD {
   position: fixed;
   padding: 8px 3px;
-  background: $black;
-  @include f-12-500;
-  color: $white;
+  background: var(--color-text);
+  color: var(--color-bg);
   width: auto;
   max-width: 360px;
   box-shadow: $elevation-center-40;
@@ -16,8 +15,8 @@
 
   &:after {
     content: "\e984";
-    font-family: $fontIcon;
-    color: $black;
+    font-family: var(--font-family-icon);
+    color: var(--color-text);
     font-size: 16px;
     width: 16px;
     height: 16px;

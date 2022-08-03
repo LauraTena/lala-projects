@@ -1,6 +1,7 @@
-[class^="ico-"], [class*=" ico-"] {
+[class^="ico-"],
+[class*=" ico-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: $fontIcon;
+  font-family: var(--font-family-icon);
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -10,7 +11,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 .ico-arrow_right:before {
   content: "\e90b";
