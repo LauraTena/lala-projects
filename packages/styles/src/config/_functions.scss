@@ -99,6 +99,6 @@
   @return hsl($color-variable-h, $color-variable-s, $color-variable-l);
 }
 
-@function getRemFromPx($unit-px: 16px) {
-  @return calc($unit-px / var(--font-size-base) * 1rem);
+@function getRemUnits($size: 16) {
+  @return calc($size / var(--font-size-base) * 1rem);
 }

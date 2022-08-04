@@ -21,13 +21,11 @@ $font-sizes-rules: (
   "h1": 6
 );
 
-
-
 @each $selector, $increase in $font-sizes-rules {
   #{$selector},
   .f-size-#{$selector} {
     @if $selector == "p" {
-      font-size: getRemFromPx(#{var(--font-size-base)});
+      font-size: getRemUnits(#{var(--font-size-base)});
     } @else {
       font-size: calc(var(--font-size-base) * var(--font-rule) * $increase);
     }

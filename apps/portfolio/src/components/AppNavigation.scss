@@ -1,4 +1,4 @@
-@import url("../../../../packages/styles/src/config/config.scss");
+@import "../../../../packages/styles/src/config/config.scss";
 
 .nav {
   display: flex;
@@ -14,10 +14,30 @@
 
   &__logo {
     font-family: var(--font-family-primary);
-    font-size: getRem(36px);
+    font-size: 36px;
+    color: var(--color-primary);
+    font-weight: 700;
+
+    span {
+      color: var(--color-text);
+    }
   }
 
-  &__item {
-    font-family: var(--font-family-primary);
+  &__link {
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      margin-left: var(--layout-gap);
+      a {
+        font-family: var(--font-family-primary);
+        font-weight: 400;
+        min-width: var(--layout-col-1);
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+      }
+    }
   }
 }

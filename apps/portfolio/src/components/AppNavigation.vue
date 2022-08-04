@@ -15,6 +15,8 @@
 </template>
 
 <style lang="scss">
+@import "../../../../packages/styles/src/config/config.scss";
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -29,7 +31,7 @@
 
   &__logo {
     font-family: var(--font-family-primary);
-    font-size: 36px;
+    font-size: getRemUnits(36);
     color: var(--color-primary);
     font-weight: 700;
 
