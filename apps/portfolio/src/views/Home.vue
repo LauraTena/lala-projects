@@ -1,15 +1,9 @@
 <template>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <h3>Home</h3>
+  <GridEight />
+  <HomeA />
 </template>
 
 <script setup lang="ts">
-import Counter from "../components/Counter.vue";
+import HomeA from "../components/HomeA.vue";
+import GridEight from "../components/GridEight.vue";
 </script>

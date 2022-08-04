@@ -1,77 +1,19 @@
 $maxWidthPx: 1920;
 
 :root {
-  --layout-gap: 32px;
-  --layout-col-1: #{getGridWidth(
-      $col: 8,
-      $gap: 32,
-      $selectionCol: 1,
-      $fullWidth: 100,
-      $widthUnit: "vw",
-      $gapLeft: false,
-      $gapRight: false
-    )};
-  --layout-col-2: #{getGridWidth(
-      $col: 8,
-      $gap: 32,
-      $selectionCol: 2,
-      $fullWidth: 100,
-      $widthUnit: "vw",
-      $gapLeft: false,
-      $gapRight: false
-    )};
-  --layout-col-3: #{getGridWidth(
-      $col: 8,
-      $gap: 32,
-      $selectionCol: 3,
-      $fullWidth: 100,
-      $widthUnit: "vw",
-      $gapLeft: false,
-      $gapRight: false
-    )};
-  --layout-col-4: #{getGridWidth(
-      $col: 8,
-      $gap: 32,
-      $selectionCol: 4,
-      $fullWidth: 100,
-      $widthUnit: "vw",
-      $gapLeft: false,
-      $gapRight: false
-    )};
-  --layout-col-5: #{getGridWidth(
-      $col: 8,
-      $gap: 32,
-      $selectionCol: 5,
-      $fullWidth: 100,
-      $widthUnit: "vw",
-      $gapLeft: false,
-      $gapRight: false
-    )};
-  --layout-col-6: #{getGridWidth(
-      $col: 8,
-      $gap: 32,
-      $selectionCol: 6,
-      $fullWidth: 100,
-      $widthUnit: "vw",
-      $gapLeft: false,
-      $gapRight: false
-    )};
-  --layout-col-7: #{getGridWidth(
-      $col: 8,
-      $gap: 32,
-      $selectionCol: 7,
-      $fullWidth: 100,
-      $widthUnit: "vw",
-      $gapLeft: false,
-      $gapRight: false
-    )};
-  --layout-col-8: #{getGridWidth(
-      $col: 8,
-      $gap: 32,
-      $selectionCol: 8,
-      $fullWidth: 100,
-      $widthUnit: "vw",
-      $gapLeft: false,
-      $gapRight: false
-    )};
+  --layout-max-width: 100vw;
+  --layout-max-height: 100vh;
+  --layout-gap: 24px;
+  --layout-margin: 64px;
+  --layout-gap-2: 64px;
+  --layout-total-columns: 8;
+  --layout-total-rows: 8;
+
+  @for $i from 1 through 8 {
+    --layout-col-#{$i}: #{getGridWidth($i)};
+  }
+
+  @for $i from 1 through 12 {
+    --layout-row-#{$i}: #{getGridHeight($i)};
+  }
 }

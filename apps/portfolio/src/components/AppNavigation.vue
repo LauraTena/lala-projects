@@ -1,8 +1,6 @@
 <template>
   <nav class="nav">
-    <router-link class="nav__logo f-size-h6" to="/"
-      >lau<span>.ra</span></router-link
-    >
+    <router-link class="nav__logo" to="/">lau<span>.ra</span></router-link>
     <ul class="nav__link__list">
       <li class="nav__link__item">
         <router-link to="/">Project</router-link>
