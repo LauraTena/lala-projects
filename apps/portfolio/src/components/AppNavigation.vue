@@ -26,6 +26,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 11;
 
   &__logo {
     font-family: var(--font-family-primary);
@@ -34,7 +35,8 @@
     font-weight: 700;
 
     span {
-      color: var(--color-text);
+      color: var(--color-bg);
+      mix-blend-mode: difference;
     }
   }
 
@@ -52,6 +54,8 @@
         text-align: center;
         display: block;
         text-transform: uppercase;
+        color: var(--color-bg);
+        mix-blend-mode: difference;
       }
     }
   }

@@ -1,11 +1,22 @@
 <template>
   <div class="home__frame">
+    <div class="home__frame__bg"></div>
     <div class="home__horizontal"></div>
     <div class="home__vertical"></div>
     <div class="home__lt">laura tena</div>
     <h1 class="home__title">
       <div class="home__creative">creative</div>
       <div class="home__developer">developer</div>
+    </h1>
+  </div>
+  <div class="home__frame home__frame--rotated">
+    <div class="home__frame__bg"></div>
+    <div class="home__horizontal"></div>
+    <div class="home__vertical"></div>
+    <div class="home__lt">laura tena</div>
+    <h1 class="home__title">
+      <div class="home__creative"><span>crea</span>tive</div>
+      <div class="home__developer"><span>deve</span>loper</div>
     </h1>
   </div>
 </template>
@@ -18,12 +29,41 @@
 
   &__frame {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: calc(var(--layout-margin) + var(--layout-col-6));
-    height: calc(
-      100% - var(--layout-margin) - var(--layout-row-1) - var(--layout-gap)
-    );
+    right: calc(var(--layout-margin) + var(--layout-col-2));
+    top: calc(var(--layout-margin) + var(--layout-row-1) + var(--layout-gap));
+    width: 100vw;
+    height: 100vw;
+
+    &--rotated {
+      transform-origin: 100vw 0;
+      transform: rotate(-30deg);
+
+      .home {
+        &__frame {
+          &__bg {
+            background: var(--color-text);
+          }
+        }
+      }
+    }
+  }
+
+  &__frame {
+    position: fixed;
+    right: calc(var(--layout-margin) + var(--layout-col-2));
+    top: calc(var(--layout-margin) + var(--layout-row-1) + var(--layout-gap));
+    width: 100vw;
+    height: 100vh;
+
+    &__bg {
+      position: absolute;
+      background: var(--color-bg);
+      top: var(--layout-row-1);
+      right: -50vw;
+      width: 150vw;
+      height: 100vh;
+      transform: translateY(-100%);
+    }
   }
 
   &__horizontal {
@@ -46,7 +86,7 @@
 
   &__lt {
     font-size: getRemUnits(42);
-    color: var(--color-text);
+    color: var(--color-bg);
     position: absolute;
     right: calc(0px - var(--layout-gap));
     top: var(--layout-row-1);
@@ -54,6 +94,7 @@
     display: inline-block;
     font-family: var(--font-family-primary);
     font-weight: 600;
+    mix-blend-mode: difference;
   }
 
   &__title {
