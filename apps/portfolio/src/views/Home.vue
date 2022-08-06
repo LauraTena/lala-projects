@@ -1,5 +1,5 @@
 <template>
-  <GridEight />
+  <!-- <GridEight /> -->
   <HomeA />
 </template>
 

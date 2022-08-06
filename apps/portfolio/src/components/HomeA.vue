@@ -1,25 +1,32 @@
 <template>
-  <div class="home__frame">
+  <div id="bidirectional" class="home__frame">
     <div class="home__frame__bg"></div>
-    <div class="home__horizontal"></div>
-    <div class="home__vertical"></div>
-    <div class="home__lt">laura tena</div>
+    <div class="home__horizontal box"></div>
+    <div class="home__vertical box"></div>
+    <div class="home__lt lt">laura tena</div>
     <h1 class="home__title">
       <div class="home__creative">creative</div>
       <div class="home__developer">developer</div>
     </h1>
   </div>
-  <div class="home__frame home__frame--rotated">
-    <div class="home__frame__bg"></div>
-    <div class="home__horizontal"></div>
-    <div class="home__vertical"></div>
-    <div class="home__lt">laura tena</div>
-    <h1 class="home__title">
-      <div class="home__creative"><span>crea</span>tive</div>
-      <div class="home__developer"><span>deve</span>loper</div>
-    </h1>
-  </div>
 </template>
+
+<script>
+import { onMounted } from "vue";
+import { setInitialState, bidirectionalRotation } from "../core/gsap/index";
+
+export default {
+  name: "CanvasComponent",
+  setup() {
+    onMounted(() => {
+      setInitialState();
+      setTimeout(() => {
+        bidirectionalRotation();
+      });
+    });
+  }
+};
+</script>
 
 <style lang="scss">
 @import "../../../../packages/styles/src/config/config.scss";
@@ -37,6 +44,7 @@
     &--rotated {
       transform-origin: 100vw 0;
       transform: rotate(-30deg);
+      // opacity: 0.2;
 
       .home {
         &__frame {
@@ -61,7 +69,7 @@
       top: var(--layout-row-1);
       right: -50vw;
       width: 150vw;
-      height: 100vh;
+      height: 100vw;
       transform: translateY(-100%);
     }
   }
@@ -72,15 +80,15 @@
     width: 100%;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
   }
 
   &__vertical {
     background: var(--color-primary);
     width: var(--layout-col-1);
-    height: calc(100% - var(--layout-row-1) - var(--layout-gap));
+    height: 100%;
     position: absolute;
-    bottom: 0;
+    top: calc(var(--layout-row-1) + var(--layout-gap));
     right: 0;
   }
 
@@ -106,7 +114,7 @@
   &__creative {
     position: absolute;
     top: calc(var(--layout-row-1) + var(--layout-gap));
-    right: calc(var(--layout-col-1) + var(--layout-gap));
+    left: calc(100% - var(--layout-col-1) - var(--layout-gap));
   }
 
   &__developer {

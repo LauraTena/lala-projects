@@ -27,16 +27,17 @@
   top: 0;
   left: 0;
   z-index: 11;
+  mix-blend-mode: difference;
 
   &__logo {
     font-family: var(--font-family-primary);
     font-size: getRemUnits(36);
-    color: var(--color-primary);
+    color: var(--color-primary-i);
     font-weight: 700;
+    position: relative;
 
     span {
       color: var(--color-bg);
-      mix-blend-mode: difference;
     }
   }
 
@@ -55,7 +56,6 @@
         display: block;
         text-transform: uppercase;
         color: var(--color-bg);
-        mix-blend-mode: difference;
       }
     }
   }

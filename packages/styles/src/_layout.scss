@@ -8,7 +8,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   font-family: var(--font-family-secondary);
-  font-size: var(--font-size-base);
+  font-size: calc(var(--font-size-base) * 1px);
   padding: 0 var(--layout-gap);
 }
 
@@ -23,12 +23,14 @@ $font-sizes-rules: (
 );
 
 @each $selector, $increase in $font-sizes-rules {
-  #{$selector},
+  #{$selector}:not([class]),
   .f-size-#{$selector} {
     @if $selector == "p" {
       font-size: getRemUnits(#{var(--font-size-base)});
     } @else {
-      font-size: calc(var(--font-size-base) * var(--font-rule) * $increase);
+      font-size: getRemUnits(
+        #{calc(var(--font-size-base) * var(--font-rule) * $increase)}
+      );
     }
   }
 }

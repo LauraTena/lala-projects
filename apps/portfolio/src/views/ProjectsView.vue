@@ -1,7 +1,5 @@
 <template>
-  <h3>Projects</h3>
+  <h1>Projects view</h1>
 </template>
 
 <script></script>
-
-<style></style>

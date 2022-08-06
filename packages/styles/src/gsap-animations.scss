@@ -1,0 +1,12 @@
+.trail {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.trail__img,
+.trail__text {
+  position: relative;
+  will-change: transform;
+  grid-area: 1 / 1 / 2 / 2;
+}

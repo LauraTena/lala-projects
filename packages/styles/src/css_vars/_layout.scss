@@ -16,4 +16,8 @@ $maxWidthPx: 1920;
   @for $i from 1 through 12 {
     --layout-row-#{$i}: #{getGridHeight($i)};
   }
+
+  @for $i from 1 through 12 {
+    --eight-rule-#{$i}: #{getRemUnits($i * 8)};
+  }
 }
