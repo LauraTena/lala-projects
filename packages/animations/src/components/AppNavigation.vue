@@ -61,10 +61,8 @@ export default {
     }
   }
 
-  &__link {
-    &--active {
-      color: var(--color-primary-i);
-    }
+  .router-link-active {
+    color: var(--color-primary-i);
   }
 }
 </style>

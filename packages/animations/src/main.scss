@@ -1,4 +1,5 @@
 @import "../../../packages/styles/src/main.scss";
+@import "./animations.scss";
 
 :root {
   --color-text: #0a0f19;
@@ -20,5 +21,5 @@ body {
 }
 
 main {
-  min-height: 65vw;
+  min-height: calc(100vh - var(--eight-rule-12));
 }

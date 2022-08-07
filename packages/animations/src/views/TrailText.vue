@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div class="trail-text">
     <div class="intro-content">
       <div class="intro-content__title intro-content__title--up">Zofia</div>
 
@@ -7,7 +7,7 @@
         Dab<em>ro</em>wski
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -136,33 +136,13 @@ export default {
   transform: translateY(18vh);
 }
 
-main {
-  min-height: 100vh;
+.trail-text {
   padding: 1rem;
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 250px;
   grid-template-rows: 25% 25% 1fr;
   grid-template-areas: "logo menu" "... ..." "button-enter button-enter" "frame frame";
-}
-
-.trail {
-  position: relative;
-  display: grid;
-  place-items: center;
-}
-
-.no-js .trail {
-  width: 100%;
-  height: 100%;
-  background-size: 100%;
-}
-
-.trail__img,
-.trail__text {
-  position: relative;
-  will-change: transform;
-  grid-area: 1 / 1 / 2 / 2;
 }
 
 .intro-content {
@@ -174,11 +154,12 @@ main {
   justify-items: center;
   grid-template-rows: 4rem min-content min-content 1rem auto 1fr;
   grid-template-areas: "..." "title-up" "title-down" "..." "image" "...";
+  padding-top: var(--eight-rule-12);
 }
 
 .intro-content__title {
-  font-size: 25vh;
-  font-size: clamp(1.5rem, 22vh, 14vw);
+  font-size: 20vh;
+  font-size: clamp(1.5rem, 16vh, 12vw);
   line-height: 0.9;
   position: relative;
   color: var(--color-title);
