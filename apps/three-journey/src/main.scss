@@ -1,0 +1,8 @@
+@import "../../../packages/styles/src/main.scss";
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-family-primary);
+}

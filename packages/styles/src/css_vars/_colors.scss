@@ -1,28 +1,84 @@
 :root {
   --color-bg: #0a0f19;
   --color-text: #f5f0e6;
-  --color-primary: #1812d6;
-  --color-primary-i: #d0d900;
-  --color-secondary: #fde4cf;
-  --color-terciary: #ffcfd2;
-  --color-fourth: #f1c0e8;
-  --color-fifth: #cfbaf0;
-  --color-sixth: #a3c4f3;
-  --color-seventh: #90dbf4;
-  --color-eighth: #98f5e1;
-  --color-ninth: #b9fbc0;
+  --color-primary: #ffb7c3;
+  --color-secondary: #bcf4de;
+  --color-gradient-1: #bcf4de;
+  --color-gradient-2: #cde5d7;
+  --color-gradient-3: #ded6d1;
+  --color-gradient-4: #eec6ca;
+  --color-gradient-5: #ffb7c3;
+
+  --gradient-transparency: 55%;
+  --gradient: radial-gradient(
+      at 0% 74%,
+      var(--color-gradient-2) 0px,
+      transparent 60%
+    ),
+    radial-gradient(
+      at 9% 7%,
+      var(--color-gradient-1) 0px,
+      transparent var(--gradient-transparency)
+    ),
+    radial-gradient(
+      at 80% 0%,
+      var(--color-gradient-2) 0px,
+      transparent var(--gradient-transparency)
+    ),
+    radial-gradient(
+      at 31% 100%,
+      var(--color-gradient-3) 0px,
+      transparent var(--gradient-transparency)
+    ),
+    radial-gradient(
+      at 80% 60%,
+      var(--color-gradient-4) 0px,
+      transparent var(--gradient-transparency)
+    ),
+    radial-gradient(
+      at 83% 99%,
+      var(--color-gradient-5) 0px,
+      transparent var(--gradient-transparency)
+    );
 }
 
-[theme="light"] {
-  --color-bg: #f5f0e6;
-  --color-text: #0a0f19;
-  --color-primary: #1812d6;
-  --color-secondary: #fde4cf;
-  --color-terciary: #ffcfd2;
-  --color-fourth: #f1c0e8;
-  --color-fifth: #cfbaf0;
-  --color-sixth: #a3c4f3;
-  --color-seventh: #90dbf4;
-  --color-eighth: #98f5e1;
-  --color-ninth: #b9fbc0;
+.gradient {
+  // background-color: var(--color-bg);
+  background-image: var(--gradient);
+
+  background-image: radial-gradient(
+      at 23% 29%,
+      var(--color-gradient-2) 0px,
+      transparent var(--gradient-transparency)
+    ),
+    radial-gradient(
+      at 0% 74%,
+      var(--color-gradient-4) 0px,
+      transparent var(--gradient-transparency)
+    ),
+    radial-gradient(
+      at 9% 7%,
+      var(--color-gradient-1) 0px,
+      transparent var(--gradient-transparency)
+    ),
+    radial-gradient(
+      at 80% 0%,
+      var(--color-gradient-2) 0px,
+      transparent var(--gradient-transparency)
+    ),
+    radial-gradient(
+      at 31% 100%,
+      var(--color-gradient-3) 0px,
+      transparent var(--gradient-transparency)
+    ),
+    radial-gradient(
+      at 80% 50%,
+      var(--color-gradient-4) 0px,
+      transparent var(--gradient-transparency)
+    ),
+    radial-gradient(
+      at 83% 99%,
+      var(--color-gradient-5) 0px,
+      transparent var(--gradient-transparency)
+    );
 }
