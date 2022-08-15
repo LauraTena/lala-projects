@@ -1,7 +1,13 @@
 <template>
-  <h3>Home</h3>
+  <h3>Animations!!!</h3>
 </template>
 
-<script setup lang="ts"></script>
+<script>
+import DefaultLayout from "../layouts/Default.vue";
+export default {
+  name: "Home",
+  layout: DefaultLayout
+};
+</script>
 
 <style lang="scss"></style>

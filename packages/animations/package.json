@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",
+    "dat.gui": "^0.7.9",
     "pinia": "^2.0.0-rc.10",
     "postcss": "^8.4.14",
     "sass": "^1.54.0",
+    "three": "^0.143.0",
     "vue": "^3.2.37",
     "vue-router": "^4.0.12"
   },

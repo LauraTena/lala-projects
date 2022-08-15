@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-transition-01">
+  <main class="layout-transition-01">
     <div class="intro">
       <div class="row row--1">
         <span class="row__text oh"
@@ -113,17 +113,19 @@
         <div class="content__row content__row--image"></div>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
 import { onMounted } from "vue";
+import DefaultLayout from "../layouts/Default.vue";
 import { gsap } from "gsap";
 import { Flip } from "gsap/Flip";
 gsap.registerPlugin(Flip);
 
 export default {
   name: "CursorEffect01",
+  layout: DefaultLayout,
   setup() {
     onMounted(() => {
       // intro section

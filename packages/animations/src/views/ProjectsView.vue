@@ -78,6 +78,7 @@
 
 <script>
 import { onMounted } from "vue";
+import DefaultLayout from "../layouts/Default.vue";
 import {
   TrailImage,
   TrailText,
@@ -95,6 +96,7 @@ const animationDefaults = {
 
 export default {
   name: "TestingThings",
+  layout: DefaultLayout,
   setup() {
     onMounted(() => {
       // trail elements (Image and the two intro title elements (up and down)

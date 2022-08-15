@@ -5,6 +5,7 @@ import CursorEffect01 from "../views/CursorEffect01.vue";
 import Layout01 from "../views/LayoutTransition01.vue";
 import Layout01Text from "../views/Layout01Text.vue";
 import Layout01Container from "../views/Layout01Container.vue";
+import Page01Transition from "../views/Page01Transition.vue";
 import AnythingAlongAnSvgPath from "../views/AnythingAlongAnSvgPath.vue";
 
 const routes = [
@@ -26,7 +27,7 @@ const routes = [
   },
   {
     path: "/anything-along-an-svg-path",
-    name: "Anything Along An Svg Path",
+    name: "Anything along an svg path",
     component: AnythingAlongAnSvgPath,
     meta: {
       library: "gsap"
@@ -52,6 +53,14 @@ const routes = [
     path: "/layout-01-container",
     name: "Layout 01 Container",
     component: Layout01Container,
+    meta: {
+      library: "gsap"
+    }
+  },
+  {
+    path: "/page-01-transition",
+    name: "Page 01 Transition",
+    component: Page01Transition,
     meta: {
       library: "gsap"
     }

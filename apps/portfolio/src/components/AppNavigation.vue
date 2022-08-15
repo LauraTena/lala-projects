@@ -1,6 +1,9 @@
 <template>
+  <router-link class="nav__logo" to="/">
+    <div class="nav__logo__lau">lau</div>
+    <div class="nav__logo__ra">.ra</div>
+  </router-link>
   <nav class="nav">
-    <router-link class="nav__logo" to="/">lau<span>.ra</span></router-link>
     <ul class="nav__link__list">
       <li class="nav__link__item">
         <router-link to="/">Project</router-link>
@@ -16,38 +19,32 @@
 @import "../../../../packages/styles/src/config/config.scss";
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 64px;
-  height: 64px;
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 11;
-  mix-blend-mode: difference;
-
   &__logo {
     font-family: var(--font-family-primary);
     font-size: getRemUnits(36);
-    color: var(--color-primary-i);
+    color: var(--color-primary);
     font-weight: 700;
-    position: relative;
 
-    span {
-      color: var(--color-bg);
+    &__lau {
+      position: fixed;
+      left: var(--layout-margin);
+      top: var(--eight-rule-2);
+      z-index: 11;
+      color: var(--color-primary);
+    }
+
+    &__ra {
+      position: fixed;
+      left: calc(var(--layout-margin) + 50px);
+      top: var(--eight-rule-2);
+      z-index: 11;
+      mix-blend-mode: exclusion;
+      color: var(--color-text);
     }
   }
 
   &__link {
-    &__list {
-      display: flex;
-    }
-
     &__item {
-      margin-left: var(--layout-gap);
       a {
         font-family: var(--font-family-primary);
         font-weight: 400;
@@ -55,7 +52,26 @@
         text-align: center;
         display: block;
         text-transform: uppercase;
-        color: var(--color-bg);
+        line-height: 64px;
+        mix-blend-mode: exclusion;
+        color: var(--color-text);
+        position: fixed;
+        top: 0;
+        z-index: 11;
+      }
+
+      &:last-child {
+        a {
+          right: var(--layout-margin);
+        }
+      }
+
+      &:nth-last-child(2) {
+        a {
+          right: calc(
+            var(--layout-margin) + var(--layout-col-1) + var(--layout-gap)
+          );
+        }
       }
     }
   }

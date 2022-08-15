@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import AppNavigation from "./components/AppNavigation.vue";
-document.documentElement.setAttribute("theme", "light");
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+
+import AppNavigation from "../components/AppNavigation.vue";
 </script>
 
 <template>
-  <div class="lala">lala</div>
   <AppNavigation />
   <router-view></router-view>
 </template>
@@ -12,14 +13,6 @@ document.documentElement.setAttribute("theme", "light");
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;731&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
-@import "./main.scss";
-
-.lala {
-  position: fixed;
-  top: calc(40% - 130px);
-  font-size: 100px;
-  line-height: 100px;
-  mix-blend-mode: exclusion;
-  color: var(--color-text);
-}
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import "../main.scss";
 </style>

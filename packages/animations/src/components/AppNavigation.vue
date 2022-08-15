@@ -62,7 +62,7 @@ export default {
   }
 
   .router-link-active {
-    color: var(--color-primary-i);
+    color: var(--color-primary);
   }
 }
 </style>

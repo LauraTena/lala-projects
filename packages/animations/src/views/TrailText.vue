@@ -1,5 +1,5 @@
 <template>
-  <div class="trail-text">
+  <main class="trail-text">
     <div class="intro-content">
       <div class="intro-content__title intro-content__title--up">Zofia</div>
 
@@ -7,11 +7,12 @@
         Dab<em>ro</em>wski
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
 import { onMounted } from "vue";
+import DefaultLayout from "../layouts/Default.vue";
 import { TrailText, animationDefaults } from "../core/gsap/index";
 import { gsap } from "gsap";
 import { Flip } from "gsap/Flip";
@@ -19,6 +20,8 @@ gsap.registerPlugin(Flip);
 
 export default {
   name: "TrailText",
+  layout: DefaultLayout,
+
   setup() {
     onMounted(() => {
       const trailTextTop = new TrailText(

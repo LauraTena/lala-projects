@@ -1,5 +1,5 @@
 <template>
-  <div class="anything-along-an-svg-path">
+  <main class="anything-along-an-svg-path">
     <svg viewBox="-10 -10 361 220">
       <path
         d="M96.5,43.2a8.21,8.21,0,0,0-11.24,3L78.79,57.42h0A72.21,72.21,0,1,0,131.59,89l7-12a8.21,8.21,0,0,0-3-11.24Z"
@@ -11,16 +11,18 @@
         stroke="#231f20"
         class="fuse" />
     </svg>
-  </div>
+  </main>
 </template>
 
 <script>
 import { onMounted } from "vue";
+import DefaultLayout from "../layouts/Default.vue";
 import { gsap } from "gsap";
 import { createParticle } from "../core/gsap";
 
 export default {
   name: "AnythingAlongAnSvgPath",
+  layout: DefaultLayout,
   setup() {
     onMounted(() => {
       const svg = document.querySelector(".anything-along-an-svg-path svg");

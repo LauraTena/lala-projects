@@ -65,11 +65,11 @@ export default {
 
     &__bg {
       position: absolute;
-      background: var(--color-bg);
+      background: var(--color-text);
       top: var(--layout-row-1);
       right: -50vw;
       width: 150vw;
-      height: 100vw;
+      height: 23vh;
       transform: translateY(-100%);
     }
   }
@@ -95,7 +95,6 @@ export default {
 
   &__lt {
     font-size: getRemUnits(42);
-    color: var(--color-bg);
     position: absolute;
     right: calc(0px - var(--layout-gap));
     top: var(--layout-row-1);
@@ -103,13 +102,11 @@ export default {
     display: inline-block;
     font-family: var(--font-family-primary);
     font-weight: 600;
-    mix-blend-mode: difference;
   }
 
   &__title {
     font-size: getRemUnits(64);
     font-weight: 600;
-    color: var(--color-text);
   }
 
   &__creative {

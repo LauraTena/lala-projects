@@ -1,5 +1,5 @@
 <template>
-  <div class="cursor-01">
+  <main class="cursor-01">
     <a class="f-size-h5" href="#">this is a link with fancy hover</a>
     <div class="image-container">
       <div class="image-mask">
@@ -45,11 +45,12 @@
       <circle class="cursor__inner" cx="50" cy="50" r="10" />
     </svg>
     <div class="content"></div>
-  </div>
+  </main>
 </template>
 
 <script>
 import { onMounted } from "vue";
+import DefaultLayout from "../layouts/Default.vue";
 import { Cursor01 } from "../core/gsap/index";
 import { gsap } from "gsap";
 import { Flip } from "gsap/Flip";
@@ -57,6 +58,7 @@ gsap.registerPlugin(Flip);
 
 export default {
   name: "CursorEffect01",
+  layout: DefaultLayout,
   setup() {
     onMounted(() => {
       // Initialize custom cursor
@@ -66,7 +68,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../../styles/src/config/config.scss";
 
 :root {

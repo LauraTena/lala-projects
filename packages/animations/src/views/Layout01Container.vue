@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-transition-01">
+  <main class="layout-transition-01">
     <div class="intro">
       <div class="image image--up">
         <div
@@ -18,17 +18,19 @@
         </button>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
 import { onMounted } from "vue";
+import DefaultLayout from "../layouts/Default.vue";
 import { gsap } from "gsap";
 import { Flip } from "gsap/Flip";
 gsap.registerPlugin(Flip);
 
 export default {
   name: "Layout01Container",
+  layout: DefaultLayout,
   setup() {
     onMounted(() => {
       // intro section
