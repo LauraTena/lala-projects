@@ -6,6 +6,7 @@ import vertex from "./shaders/vertex.glsl?raw";
 export default class Sketch {
   constructor(options) {
     this.container = options.domElement;
+    this.urlTexture = options.urlTexture;
     this.width = this.container.offsetWidth;
     this.height = this.container.offsetHeight;
     this.camera = new THREE.PerspectiveCamera(
@@ -36,10 +37,13 @@ export default class Sketch {
     console.log(this.geometry);
     this.geometry = new THREE.PlaneBufferGeometry(0.5, 0.5, 100, 100);
     this.material = new THREE.ShaderMaterial({
-      wireframe: true,
+      wireframe: false,
       uniforms: {
         time: { value: 1.0 },
-        resolution: { value: new THREE.Vector2() }
+        resolution: { value: new THREE.Vector2() },
+        uTexture: {
+          value: new THREE.TextureLoader().load(this.urlTexture)
+        }
       },
       vertexShader: vertex,
       fragmentShader: fragment

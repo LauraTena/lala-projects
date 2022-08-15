@@ -17,7 +17,8 @@ export default {
         .classList.add("page-01-transition");
 
       new Sketch({
-        domElement: document.getElementById("container")
+        domElement: document.getElementById("container"),
+        urlTexture: "/images/page-01-transition/texture.jpg"
       });
     });
   }
