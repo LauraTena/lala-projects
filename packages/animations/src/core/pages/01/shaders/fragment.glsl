@@ -13,5 +13,5 @@ void main() {
     /* distort with shaders */
     vec4 myimage = texture(uTexture,vUv + 0.01*sin(vUv*20. + time));
     gl_FragColor = myimage;
-    gl_FragColor = vec4(vNormal,1.);
+    gl_FragColor = vec4(0.5*(pulse+1.),0.,0.,1.);
 }
