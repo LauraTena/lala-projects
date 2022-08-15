@@ -53,7 +53,7 @@ body {
   color: #eee;
 }
 main {
-  background: #000;
+  // background: #000;
   font-family: "Coustard", serif;
   font-weight: 400;
   color: #fff;
@@ -73,7 +73,7 @@ canvas {
   z-index: -1;
   top: 0;
   left: 0;
-  background: #000;
+  background: #ccc;
 }
 .content {
   display: inline-flex;
