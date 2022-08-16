@@ -6,7 +6,7 @@ uniform vec2 uQuadSize;
 
 varying vec2 vUv;
 varying vec2 vSize;
-uniform vec2 uCorners;
+uniform vec4 uCorners;
 
 void main() {
     vUv = uv;
@@ -14,7 +14,11 @@ void main() {
     vec4 fullScreenState=  vec4( position, 1.0 );
     fullScreenState.x *= uResolution.x/uQuadSize.x;
     fullScreenState.y *= uResolution.y/uQuadSize.y;
-    float cornersProgress = mix(uCorners.x, uCorners.y, uv.x);
+    float cornersProgress = mix(
+        mix(uCorners.x, uCorners.y, uv.x),
+        mix(uCorners.z, uCorners.w, uv.x),
+        uv.y
+    );
 
     vec4 finalState = mix(defaultState,fullScreenState,cornersProgress);
 
