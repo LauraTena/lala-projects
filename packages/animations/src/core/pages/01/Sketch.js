@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import fragment from './shaders/fragment.glsl?raw';
 import vertex from './shaders/vertex.glsl?raw';
 import * as dat from 'dat.gui';
-
+import gsap from 'gsap';
 export default class Sketch {
   constructor(options) {
     this.container = options.domElement;
@@ -64,13 +64,23 @@ export default class Sketch {
           value: new THREE.TextureLoader().load(this.urlTexture),
         },
         uTextureSize: { value: new THREE.Vector2(100, 100) },
-        uCorners: { value: new THREE.Vector4(0, 0, 0, 0) },
+        uCorners: { value: new THREE.Vector2(0, 0) },
         uResolution: { value: new THREE.Vector2(this.width, this.height) },
         uQuadSize: { value: new THREE.Vector2(300, 300) },
       },
       vertexShader: vertex,
       fragmentShader: fragment,
     });
+
+    this.tl = gsap
+      .timeline()
+      .to(this.material.uniforms.uCorners.value, {
+        x: 1,
+      })
+      .to(this.material.uniforms.uCorners.value, {
+        y: 1,
+      });
+
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.mesh.position.x = 300;
     this.mesh.rotation.z = 0.5;
@@ -94,6 +104,7 @@ export default class Sketch {
     this.time += 0.05;
     this.material.uniforms.time.value = this.time;
     this.material.uniforms.uProgress.value = this.settings.progress;
+    this.tl.progress(this.settings.progress);
     this.mesh.rotation.x = this.time / 2000;
     this.mesh.rotation.y = this.time / 1000;
     this.renderer.render(this.scene, this.camera);

@@ -6,6 +6,7 @@ uniform vec2 uQuadSize;
 
 varying vec2 vUv;
 varying vec2 vSize;
+uniform vec2 uCorners;
 
 void main() {
     vUv = uv;
@@ -13,7 +14,9 @@ void main() {
     vec4 fullScreenState=  vec4( position, 1.0 );
     fullScreenState.x *= uResolution.x/uQuadSize.x;
     fullScreenState.y *= uResolution.y/uQuadSize.y;
-    vec4 finalState = mix(defaultState,fullScreenState,uProgress);
+    float cornersProgress = mix(uCorners.x, uCorners.y, uv.x);
+
+    vec4 finalState = mix(defaultState,fullScreenState,cornersProgress);
 
     vSize = mix(uQuadSize, uResolution, uProgress);
     gl_Position = projectionMatrix * viewMatrix * finalState;
