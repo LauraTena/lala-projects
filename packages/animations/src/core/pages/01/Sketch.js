@@ -1,8 +1,8 @@
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import fragment from "./shaders/fragment.glsl?raw";
-import vertex from "./shaders/vertex.glsl?raw";
-import * as dat from "dat.gui";
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import fragment from './shaders/fragment.glsl?raw';
+import vertex from './shaders/vertex.glsl?raw';
+import * as dat from 'dat.gui';
 
 export default class Sketch {
   constructor(options) {
@@ -14,21 +14,28 @@ export default class Sketch {
       30,
       this.width / this.height,
       10, //near plane
-      1000 // far plane
+      1000, // far plane
     );
     this.camera.position.z = 600;
-    this.camera.fov = (2 * Math.atan(this.height / 2 / 600) * 180) / Math.PI;
+    this.camera.fov =
+      (2 * Math.atan(this.height / 2 / 600) * 180) / Math.PI;
     this.camera.updateProjectionMatrix();
 
     this.scene = new THREE.Scene();
 
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    this.renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true,
+    });
     // for performance
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(this.width, this.height);
 
     this.container.appendChild(this.renderer.domElement);
-    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    this.controls = new OrbitControls(
+      this.camera,
+      this.renderer.domElement,
+    );
 
     this.time = 0;
     this.setupSettings();
@@ -39,10 +46,10 @@ export default class Sketch {
 
   setupSettings() {
     this.settings = {
-      progress: 0
+      progress: 0,
     };
     this.gui = new dat.GUI();
-    this.gui.add(this.settings, "progress", 0, 1, 0.001);
+    this.gui.add(this.settings, 'progress', 0, 1, 0.001);
   }
 
   addObjects() {
@@ -51,16 +58,18 @@ export default class Sketch {
     this.material = new THREE.ShaderMaterial({
       wireframe: false,
       uniforms: {
-                time: { value: 1.0 },
-                uProgress: { value: 0 },
-                uTexture: {value: new THREE.TextureLoader().load(this.urlTexture)},
-                uTextureSize: {value: new THREE.Vector2(100,100)},
-                uCorners: {value: new THREE.Vector4(0,0,0,0)},
-                uResolution: { value: new THREE.Vector2(this.width,this.height) },
-                uQuadSize: { value: new THREE.Vector2(300,300) }
-            },
+        time: { value: 1.0 },
+        uProgress: { value: 0 },
+        uTexture: {
+          value: new THREE.TextureLoader().load(this.urlTexture),
+        },
+        uTextureSize: { value: new THREE.Vector2(100, 100) },
+        uCorners: { value: new THREE.Vector4(0, 0, 0, 0) },
+        uResolution: { value: new THREE.Vector2(this.width, this.height) },
+        uQuadSize: { value: new THREE.Vector2(300, 300) },
+      },
       vertexShader: vertex,
-      fragmentShader: fragment
+      fragmentShader: fragment,
     });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.mesh.position.x = 300;
@@ -70,7 +79,7 @@ export default class Sketch {
   }
 
   setupResize() {
-    window.addEventListener("resize", this.resize.bind(this));
+    window.addEventListener('resize', this.resize.bind(this));
   }
 
   resize() {
