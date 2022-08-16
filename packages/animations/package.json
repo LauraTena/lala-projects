@@ -8,6 +8,7 @@
     "lint": "eslint --ext .js,.ts,.vue src"
   },
   "dependencies": {
+    "@ashthornton/asscroll": "^2.0.11",
     "autoprefixer": "^10.4.7",
     "dat.gui": "^0.7.9",
     "pinia": "^2.0.0-rc.10",

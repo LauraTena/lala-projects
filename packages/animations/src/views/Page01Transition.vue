@@ -1,32 +1,106 @@
 <template>
+  <div class="header">
+    <a href="index.html" class="logo">Title Of Project</a>
+  </div>
+
+  <div data-barba="wrapper">
+    <div data-barba="container" data-barba-namespace="home">
+      <div asscroll-container>
+        <div class="scroll-wrap">
+          <!-- BEGIN content -->
+          <div class="content">
+            <!-- BEGIN item -->
+            <a href="inside.html" class="item">
+              <img
+                src="/images/page-01-transition/texture.jpg"
+                class="js-image"
+                alt=""
+              />
+              <h2>Some title</h2>
+              <p>And some very interesting description.</p>
+            </a>
+            <!-- END item -->
+            <!-- BEGIN item -->
+            <a href="inside.html" class="item">
+              <img
+                src="/images/page-01-transition/texture.jpg"
+                class="js-image"
+                alt=""
+              />
+              <h2>Some title</h2>
+              <p>And some very interesting description.</p>
+            </a>
+            <!-- END item -->
+            <!-- BEGIN item -->
+            <a href="inside.html" class="item">
+              <img
+                src="/images/page-01-transition/texture.jpg"
+                class="js-image"
+                alt=""
+              />
+              <h2>Some title</h2>
+              <p>And some very interesting description.</p>
+            </a>
+            <!-- END item -->
+            <!-- BEGIN item -->
+            <a href="inside.html" class="item">
+              <img
+                src="/images/page-01-transition/texture.jpg"
+                class="js-image"
+                alt=""
+              />
+              <h2>Some title</h2>
+              <p>And some very interesting description.</p>
+            </a>
+            <!-- END item -->
+            <!-- BEGIN item -->
+            <a href="inside.html" class="item">
+              <img
+                src="/images/page-01-transition/texture.jpg"
+                class="js-image"
+                alt=""
+              />
+              <h2>Some title</h2>
+              <p>And some very interesting description.</p>
+            </a>
+            <!-- END item -->
+          </div>
+          <!-- END content -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end barba -->
+
+  <div class="curtain"></div>
   <div id="container"></div>
 </template>
 
 <script>
-import { onMounted } from "vue";
-import EmptyLayout from "../layouts/Empty.vue";
-import Sketch from "../core/pages/01/Sketch";
+import { onMounted } from 'vue';
+import EmptyLayout from '../layouts/Empty.vue';
+import Sketch from '../core/pages/01/Sketch';
 
 export default {
-  name: "Page01Transition",
+  name: 'Page01Transition',
   layout: EmptyLayout,
   setup() {
     onMounted(() => {
       document
-        .getElementsByTagName("body")[0]
-        .classList.add("page-01-transition");
+        .getElementsByTagName('body')[0]
+        .classList.add('page-01-transition');
 
       new Sketch({
-        domElement: document.getElementById("container"),
-        urlTexture: "/images/page-01-transition/texture.jpg"
+        domElement: document.getElementById('container'),
+        urlTexture: '/images/page-01-transition/texture.jpg',
       });
     });
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../../../styles/src/config/config.scss";
+@import '../../../styles/src/config/config.scss';
 
 * {
   margin: 0;
@@ -49,7 +123,7 @@ export default {
 }
 main {
   // background: #000;
-  font-family: "Coustard", serif;
+  font-family: 'Coustard', serif;
   font-weight: 400;
   color: #fff;
   overflow-x: auto;
@@ -68,7 +142,6 @@ canvas {
   z-index: -1;
   top: 0;
   left: 0;
-  background: #ccc;
 }
 .content {
   display: inline-flex;
@@ -81,7 +154,7 @@ canvas {
 
 /* item */
 .item {
-  font-family: "Coustard", serif;
+  font-family: 'Coustard', serif;
   text-decoration: none;
   color: #eee;
 }
@@ -104,7 +177,7 @@ canvas {
 .item img {
   width: 30vw;
   height: 30vw;
-  // opacity: 0.1;
+  opacity: 0.1;
 }
 /* single */
 .single {

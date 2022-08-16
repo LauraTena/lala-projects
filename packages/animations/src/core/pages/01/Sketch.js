@@ -4,6 +4,7 @@ import fragment from './shaders/fragment.glsl?raw';
 import vertex from './shaders/vertex.glsl?raw';
 import * as dat from 'dat.gui';
 import gsap from 'gsap';
+import ASScroll from '@ashthornton/asscroll';
 export default class Sketch {
   constructor(options) {
     this.container = options.domElement;
@@ -37,6 +38,11 @@ export default class Sketch {
       this.renderer.domElement,
     );
 
+    this.asscroll = new ASScroll();
+    this.asscroll.enable({
+      horizontalScroll: true,
+    });
+
     this.time = 0;
     this.setupSettings();
     this.addObjects();
@@ -53,7 +59,7 @@ export default class Sketch {
   }
 
   addObjects() {
-    this.geometry = new THREE.PlaneBufferGeometry(300, 300, 100, 100);
+    this.geometry = new THREE.PlaneBufferGeometry(1, 1, 100, 100);
 
     this.material = new THREE.ShaderMaterial({
       wireframe: false,
@@ -104,10 +110,34 @@ export default class Sketch {
       );
 
     this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.mesh.scale.set(300, 300, 1);
     this.mesh.position.x = 300;
-    // this.mesh.rotation.z = 0.5;
-    // this.mesh.scale.set(2, 1, 1);
-    this.scene.add(this.mesh);
+    // this.scene.add(this.mesh);
+
+    this.images = [...document.querySelectorAll('.js-image')];
+    this.materials = [];
+    this.imageStore = this.images.map((img) => {
+      let bounds = img.getBoundingClientRect();
+      let m = this.material.clone();
+      this.materials.push(m);
+      let texture = new THREE.TextureLoader().load(img.src);
+
+      m.uniforms.uTexture.value = texture;
+
+      let mesh = new THREE.Mesh(this.geometry, m);
+      this.scene.add(mesh);
+
+      mesh.scale.set(bounds.width, bounds.height, 1);
+
+      return {
+        img,
+        mesh,
+        width: bounds.width,
+        height: bounds.height,
+        top: bounds.top,
+        left: bounds.left,
+      };
+    });
   }
 
   setupResize() {

@@ -13,11 +13,11 @@ float PI = 3.1415926;
 void main() {
     vUv = uv;
     float sine = sin(PI*uProgress);
-    float waves = sine*0.1*sin(20.*length(uv) * uProgress);
+    float waves = sine*0.1*sin(10.*length(uv) * uProgress);
     vec4 defaultState =  modelMatrix * vec4( position, 1.0 );
     vec4 fullScreenState=  vec4( position, 1.0 );
-    fullScreenState.x *= uResolution.x/uQuadSize.x;
-    fullScreenState.y *= uResolution.y/uQuadSize.y;
+    fullScreenState.x *= uResolution.x;
+    fullScreenState.y *= uResolution.y;
     float cornersProgress = mix(
         mix(uCorners.x, uCorners.y, uv.x),
         mix(uCorners.z, uCorners.w, uv.x),

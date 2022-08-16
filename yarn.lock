@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@ashthornton/asscroll@^2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@ashthornton/asscroll/-/asscroll-2.0.11.tgz#d8f3d6c52244d724bd294fa18075d97dd7689370"
+  integrity sha512-X7Z+0aePdxn2WeKTx+sX/U9KNwjRSlY+ZeoGO7ZQy4uKRZ2cSHZi5ho9WiuDAPTPj97Smb2aZ7XC8goR73SmPA==
+  dependencies:
+    "@unseenco/e" "^2.2.2"
+
 "@babel/helper-validator-identifier@^7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.18.6.tgz#9c97e30d31b2b8c72a1d08984f2ca9b574d7a076"
@@ -89,6 +96,13 @@
   version "18.6.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.6.1.tgz#828e4785ccca13f44e2fb6852ae0ef11e3e20ba5"
   integrity sha512-z+2vB6yDt1fNwKOeGbckpmirO+VBDuQqecXkgeIqDlaOtmKn6hPR/viQ8cxCfqLU4fTlvM3+YjM367TukWdxpg==
+
+"@unseenco/e@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@unseenco/e/-/e-2.2.2.tgz#aa013949789b9a65e61bb461fae9bf8f40f5a121"
+  integrity sha512-7d+CKXw5rJDz1zkKiAQQGBLOUZ1JqV+c9pTTERSKwfwjjq6sJkoDbo+L0usmu7kDzIUxJKWOtm1JoCTrYNHIZw==
+  dependencies:
+    selector-set "^1.1.5"
 
 "@vitejs/plugin-vue@^2.0.0":
   version "2.3.3"
@@ -1879,6 +1893,11 @@ schema-utils@^3.0.0:
     "@types/json-schema" "^7.0.8"
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
+
+selector-set@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/selector-set/-/selector-set-1.1.5.tgz#60c135aea482b6f46a2d95ad72058927690a8634"
+  integrity sha512-6SQw6yMew5iOZ8/cDHDEnJWRM4ot2mxP6szZyF5ptrBogw4AcS4EXRj/8BUfgAMwVfdL84qpModlBMOl2NVrsQ==
 
 semver@^7.3.5:
   version "7.3.5"
