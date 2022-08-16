@@ -2,17 +2,16 @@
 @import "./animations.scss";
 
 :root {
-  --color-text: #0a0f19;
-  --color-bg: #f5f0e6;
   --font-family-primary: "Source Sans Pro", sans-serif;
   --font-family-secondary: "Source Sans Pro", sans-serif;
 }
 
-body:not[class] {
+body {
   width: 100%;
   height: 100%;
   overflow: hidden;
   padding-left: var(--nav-width);
+  padding-right: 0;
   box-sizing: border-box;
   max-width: 100vw;
 }

@@ -5,6 +5,7 @@ uniform vec2 uResolution;
 uniform vec2 uQuadSize;
 
 varying vec2 vUv;
+varying vec2 vSize;
 
 void main() {
     vUv = uv;
@@ -13,6 +14,8 @@ void main() {
     fullScreenState.x *= uResolution.x/uQuadSize.x;
     fullScreenState.y *= uResolution.y/uQuadSize.y;
     vec4 finalState = mix(defaultState,fullScreenState,uProgress);
+
+    vSize = mix(uQuadSize, uResolution, uProgress);
     gl_Position = projectionMatrix * viewMatrix * finalState;
 
     //model matrix remove all the positions set with three this.mesh.position.x = 100

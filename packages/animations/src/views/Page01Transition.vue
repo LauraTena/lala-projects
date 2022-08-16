@@ -25,20 +25,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../../styles/src/config/config.scss";
 
 * {
   margin: 0;
   padding: 0;
 }
-body {
-  // background: #000;
-  font-family: "Coustard", serif;
-  font-weight: 400;
-  color: #fff;
-  overflow: auto;
-}
+
 .header {
   font-weight: 900;
   color: #eee;

@@ -51,21 +51,21 @@ export default class Sketch {
     this.material = new THREE.ShaderMaterial({
       wireframe: false,
       uniforms: {
-        time: { value: 1.0 },
-        resolution: { value: new THREE.Vector2() },
-        uTexture: {
-          value: new THREE.TextureLoader().load(this.urlTexture)
-        },
-        uProgress: {
-          value: 1
-        }
-      },
+                time: { value: 1.0 },
+                uProgress: { value: 0 },
+                uTexture: {value: new THREE.TextureLoader().load(this.urlTexture)},
+                uTextureSize: {value: new THREE.Vector2(100,100)},
+                uCorners: {value: new THREE.Vector4(0,0,0,0)},
+                uResolution: { value: new THREE.Vector2(this.width,this.height) },
+                uQuadSize: { value: new THREE.Vector2(300,300) }
+            },
       vertexShader: vertex,
       fragmentShader: fragment
     });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
-    this.mesh.position.x = 100;
+    this.mesh.position.x = 300;
     this.mesh.rotation.z = 0.5;
+    // this.mesh.scale.set(2, 1, 1);
     this.scene.add(this.mesh);
   }
 
