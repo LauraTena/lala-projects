@@ -38,7 +38,9 @@ export default class Sketch {
       this.renderer.domElement,
     );
 
-    this.asscroll = new ASScroll();
+    this.asscroll = new ASScroll({
+      disableRaf: true,
+    });
     this.asscroll.enable({
       horizontalScroll: true,
     });
@@ -62,7 +64,7 @@ export default class Sketch {
     this.geometry = new THREE.PlaneBufferGeometry(1, 1, 100, 100);
 
     this.material = new THREE.ShaderMaterial({
-      wireframe: false,
+      wireframe: true,
       uniforms: {
         time: { value: 1.0 },
         uProgress: { value: 0 },
@@ -140,6 +142,14 @@ export default class Sketch {
     });
   }
 
+  setPositionsMesh() {
+    this.imageStore.forEach((o) => {
+      o.mesh.position.x =
+        o.left - this.width / 2 + o.width / 2 - this.asscroll.currentPos;
+      o.mesh.position.y = -o.top + this.height / 2 - o.height / 2;
+    });
+  }
+
   setupResize() {
     window.addEventListener('resize', this.resize.bind(this));
   }
@@ -149,13 +159,32 @@ export default class Sketch {
     this.height = this.container.offsetHeight;
     this.renderer.setSize(this.width, this.height);
     this.camera.aspect = this.width / this.height;
+    this.camera.fov =
+      (2 * Math.atan(this.height / 2 / 600) * 180) / Math.PI;
     this.camera.updateProjectionMatrix();
+    this.camera.updateProjectionMatrix();
+    this.materials.forEach((m) => {
+      m.uniforms.uResolution.value.x = this.width;
+      m.uniforms.uResolution.value.y = this.height;
+    });
+    this.imageStore.forEach((o) => {
+      let bounds = o.img.getBoundingClientRect();
+      o.width = bounds.width;
+      o.height = bounds.height;
+      o.top = bounds.top;
+      o.left = bounds.left + this.asscroll.currentPos;
+      o.mesh.scale.set(bounds.width, bounds.height, 1);
+      o.mesh.material.uniforms.uQuadSize.value.x = bounds.width;
+      o.mesh.material.uniforms.uQuadSize.value.y = bounds.height;
+    });
   }
 
   render() {
     this.time += 0.05;
     this.material.uniforms.time.value = this.time;
     this.material.uniforms.uProgress.value = this.settings.progress;
+    this.asscroll.update();
+    this.setPositionsMesh();
     this.tl.progress(this.settings.progress);
     this.mesh.rotation.x = this.time / 2000;
     this.mesh.rotation.y = this.time / 1000;
