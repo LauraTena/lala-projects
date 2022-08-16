@@ -105,7 +105,7 @@ export default class Sketch {
 
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.mesh.position.x = 300;
-    this.mesh.rotation.z = 0.5;
+    // this.mesh.rotation.z = 0.5;
     // this.mesh.scale.set(2, 1, 1);
     this.scene.add(this.mesh);
   }
