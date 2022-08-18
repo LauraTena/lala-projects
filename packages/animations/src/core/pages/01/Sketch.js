@@ -5,6 +5,7 @@ import vertex from './shaders/vertex.glsl?raw';
 import * as dat from 'dat.gui';
 import gsap from 'gsap';
 import ASScroll from '@ashthornton/asscroll';
+
 export default class Sketch {
   constructor(options) {
     this.container = options.domElement;
@@ -49,8 +50,10 @@ export default class Sketch {
     // this.setupSettings();
     this.addObjects();
     this.render();
+
     this.setupResize();
   }
+
 
   setupSettings() {
     this.settings = {

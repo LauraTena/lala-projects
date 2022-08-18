@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@ashthornton/asscroll": "^2.0.11",
+    "@barba/core": "^2.9.7",
     "autoprefixer": "^10.4.7",
+    "barba": "^1.0.0",
     "dat.gui": "^0.7.9",
     "pinia": "^2.0.0-rc.10",
     "postcss": "^8.4.14",

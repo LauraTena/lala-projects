@@ -1,7 +1,4 @@
 <template>
   <router-view></router-view>
 </template>
-<script setup lang="ts">
-
-console.log("ee")
-</script>
+<script setup lang="ts"></script>

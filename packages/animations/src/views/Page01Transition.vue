@@ -1,79 +1,86 @@
 <template>
-  <div class="header">
-    <a href="index.html" class="logo">Title Of Project</a>
-  </div>
 
-  <div data-barba="wrapper">
-    <div data-barba="container" data-barba-namespace="home">
-      <div asscroll-container>
-        <div class="scroll-wrap">
-          <!-- BEGIN content -->
-          <div class="content">
-            <!-- BEGIN item -->
-            <a href="inside.html" class="item">
-              <img
-                src="/images/page-01-transition/texture.jpg"
-                class="js-image"
-                alt=""
-              />
-              <h2>Some title</h2>
-              <p>And some very interesting description.</p>
-            </a>
-            <!-- END item -->
-            <!-- BEGIN item -->
-            <a href="inside.html" class="item">
-              <img
-                src="/images/page-01-transition/texture.jpg"
-                class="js-image"
-                alt=""
-              />
-              <h2>Some title</h2>
-              <p>And some very interesting description.</p>
-            </a>
-            <!-- END item -->
-            <!-- BEGIN item -->
-            <a href="inside.html" class="item">
-              <img
-                src="/images/page-01-transition/texture.jpg"
-                class="js-image"
-                alt=""
-              />
-              <h2>Some title</h2>
-              <p>And some very interesting description.</p>
-            </a>
-            <!-- END item -->
-            <!-- BEGIN item -->
-            <a href="inside.html" class="item">
-              <img
-                src="/images/page-01-transition/texture.jpg"
-                class="js-image"
-                alt=""
-              />
-              <h2>Some title</h2>
-              <p>And some very interesting description.</p>
-            </a>
-            <!-- END item -->
-            <!-- BEGIN item -->
-            <a href="inside.html" class="item">
-              <img
-                src="/images/page-01-transition/texture.jpg"
-                class="js-image"
-                alt=""
-              />
-              <h2>Some title</h2>
-              <p>And some very interesting description.</p>
-            </a>
-            <!-- END item -->
+
+  <div data-barba="container" data-barba-namespace="home">
+    <div class="header">
+      <!-- <a href="/page-01-transition-inside" class="logo">Title Of Project</a> -->
+      <router-link
+            to="/page-01-transition-inside"
+            > Go inside </router-link>
+    </div>
+    <div data-barba="wrapper">
+      <div data-barba="container" data-barba-namespace="home">
+        <div asscroll-container>
+          <div class="scroll-wrap">
+            <!-- BEGIN content -->
+            <div class="content xxx">
+              <!-- BEGIN item -->
+              <a href="inside.html" class="item">
+                <img
+                  src="/images/page-01-transition/texture.jpg"
+                  class="js-image"
+                  alt=""
+                />
+                <h2>Some title</h2>
+                <p>And some very interesting description.</p>
+              </a>
+              <!-- END item -->
+              <!-- BEGIN item -->
+              <a href="inside.html" class="item">
+                <img
+                  src="/images/page-01-transition/texture.jpg"
+                  class="js-image"
+                  alt=""
+                />
+                <h2>Some title</h2>
+                <p>And some very interesting description.</p>
+              </a>
+              <!-- END item -->
+              <!-- BEGIN item -->
+              <a href="inside.html" class="item">
+                <img
+                  src="/images/page-01-transition/texture.jpg"
+                  class="js-image"
+                  alt=""
+                />
+                <h2>Some title</h2>
+                <p>And some very interesting description.</p>
+              </a>
+              <!-- END item -->
+              <!-- BEGIN item -->
+              <a href="inside.html" class="item">
+                <img
+                  src="/images/page-01-transition/texture.jpg"
+                  class="js-image"
+                  alt=""
+                />
+                <h2>Some title</h2>
+                <p>And some very interesting description.</p>
+              </a>
+              <!-- END item -->
+              <!-- BEGIN item -->
+              <a href="inside.html" class="item">
+                <img
+                  src="/images/page-01-transition/texture.jpg"
+                  class="js-image"
+                  alt=""
+                />
+                <h2>Some title</h2>
+                <p>And some very interesting description.</p>
+              </a>
+              <!-- END item -->
+            </div>
+            <!-- END content -->
           </div>
-          <!-- END content -->
         </div>
       </div>
     </div>
-  </div>
-  <!-- end barba -->
 
-  <div class="curtain"></div>
-  <div id="container"></div>
+    <div class="curtain"></div>
+    <div id="container"></div>
+  </div>
+
+  <!-- end barba -->
 </template>
 
 <script>
@@ -84,17 +91,24 @@ import Sketch from '../core/pages/01/Sketch';
 export default {
   name: 'Page01Transition',
   layout: EmptyLayout,
+
+  
   setup() {
+
     onMounted(() => {
       document
         .getElementsByTagName('body')[0]
         .classList.add('page-01-transition');
 
-      new Sketch({
-        domElement: document.getElementById('container'),
-        urlTexture: '/images/page-01-transition/texture.jpg',
-      });
+      setTimeout(() => {
+        new Sketch({
+          domElement: document.getElementById('container'),
+          urlTexture: '/images/page-01-transition/texture.jpg',
+        });
+
+      }, 2000)
     });
+
   },
 };
 </script>
@@ -134,6 +148,7 @@ main {
 
 canvas {
   display: block;
+  z-index: 1000;
 }
 #container {
   width: 100vw;
@@ -177,7 +192,6 @@ canvas {
 .item img {
   width: 30vw;
   height: 30vw;
-  opacity: 0.1;
 }
 /* single */
 .single {

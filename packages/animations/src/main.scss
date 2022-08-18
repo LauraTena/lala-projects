@@ -22,6 +22,12 @@ body.page-01-transition {
   font-weight: 400;
   color: #fff;
   overflow: auto;
+  padding-left: 0!important;
+}
+.single {
+  width: 30vh;
+  height: 30vh;
+  overflow: hidden;
 }
 main {
   margin-top: var(--eight-rule-4);
