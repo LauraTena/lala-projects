@@ -4,7 +4,7 @@ const mappingArtist = (artist) => ({
 });
 
 const mappingPlaylist = (playlist) => {
-  const mappedData = playlist.map((x: any) => {
+  const mappedData = playlist.map((x) => {
     return {
       album: {
         id: x.track.album.id,

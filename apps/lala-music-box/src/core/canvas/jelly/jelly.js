@@ -35,7 +35,7 @@ var require_jelly = __commonJS({
         return target;
       }
 
-      function extend(target, source) {
+      function extend(target) {
         if (!target) target = {};
         for (var i = 1; i < arguments.length; i++)
           extendSingle(target, arguments[i]);
@@ -147,7 +147,7 @@ var require_jelly = __commonJS({
             that.speed = dist ? dist / 10 : 0;
           });
 
-          this.canvas.addEventListener("mouseout", function (e) {
+          this.canvas.addEventListener("mouseout", function () {
             that.mouseX = undefined;
             that.mouseY = undefined;
             that.speed = undefined;

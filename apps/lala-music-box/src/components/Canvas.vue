@@ -12,7 +12,7 @@ import { GenerateCanvas, GetSvgOptions } from "../core/canvas";
 
 export default {
   name: "CanvasComponent",
-  setup(props, context) {
+  setup() {
     const svg = ref(null);
     const canvas = ref(null);
 

@@ -1,9 +1,9 @@
 import { defineStore } from "pinia";
-import { Buffer } from "buffer";
+import Buffer from "buffer";
 import { mappingPlaylist } from "../core/mappers";
 
-const clientId = import.meta.env.VITE_APP_CLIENT_ID;
-const clientSecret = import.meta.env.VITE_APP_CLIENT_SECRET;
+// const clientId = import.meta.env.VITE_APP_CLIENT_ID;
+// const clientSecret = import.meta.env.VITE_APP_CLIENT_SECRET;
 
 export const useHomeStore = defineStore("home", {
   state: () => ({

@@ -493,7 +493,7 @@ export default {
   line-height: 0.55;
   position: relative;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: start;
   align-content: start;
 }
