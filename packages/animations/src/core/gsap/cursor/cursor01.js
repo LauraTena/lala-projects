@@ -58,6 +58,7 @@ export class Cursor01 {
    */
   enter() {
     for (const el of this.cursorElements) {
+      console.log(el)
       el.enter();
     }
   }
@@ -189,6 +190,7 @@ class CursorElement {
   }
 
   createFilterTimeline() {
+    console.log(this.DOM)
     this.filterTimeline = gsap
       .timeline({
         paused: true,

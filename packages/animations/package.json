@@ -1,5 +1,5 @@
 {
-  "name": "@lau.ra/packages-animations",
+  "name": "@lau.ra/animations",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --port 11000",

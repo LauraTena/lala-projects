@@ -1,51 +1,53 @@
 <template>
-  <main class="cursor-01">
-    <a class="f-size-h5" href="#">this is a link with fancy hover</a>
-    <div class="image-container">
-      <div class="image-mask">
-        <img
-          class="is-inside-mask"
-          src="https://www.re-thinkingthefuture.com/wp-content/uploads/2020/05/A806-New-Delhi-How-Architecture-and-Politics-shaped-the-city-and-continues-shaping-it.-1.jpg"
-          alt="" />
+  <DefaultLayout>
+    <main class="cursor-01">
+      <a class="f-size-h5" href="#">this is a link with fancy hover</a>
+      <div class="image-container">
+        <div class="image-mask">
+          <img
+            class="is-inside-mask"
+            src="https://www.re-thinkingthefuture.com/wp-content/uploads/2020/05/A806-New-Delhi-How-Architecture-and-Politics-shaped-the-city-and-continues-shaping-it.-1.jpg"
+            alt="" />
+        </div>
       </div>
-    </div>
 
-    <svg class="cursor" width="100" height="100" viewBox="0 0 100 100">
-      <defs>
-        <filter
-          id="cursor-filter"
-          x="-50%"
-          y="-50%"
-          width="200%"
-          height="200%"
-          filterUnits="objectBoundingBox">
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency="0"
-            numOctaves="1"
-            result="warp" />
-          <feOffset dx="0" result="warpOffset" />
-          <feDisplacementMap
-            xChannelSelector="R"
-            yChannelSelector="G"
-            scale="40"
-            in="SourceGraphic"
-            in2="warpOffset" />
-        </filter>
-      </defs>
-      <circle class="cursor__inner" cx="50" cy="50" r="10" />
-    </svg>
-    <svg
-      class="cursor"
-      width="100"
-      height="100"
-      viewBox="0 0 100 100"
-      data-amt="0.15"
-      data-radius-enter="40">
-      <circle class="cursor__inner" cx="50" cy="50" r="10" />
-    </svg>
-    <div class="content"></div>
-  </main>
+      <svg class="cursor" width="100" height="100" viewBox="0 0 100 100">
+        <defs>
+          <filter
+            id="cursor-filter"
+            x="-50%"
+            y="-50%"
+            width="200%"
+            height="200%"
+            filterUnits="objectBoundingBox">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0"
+              numOctaves="1"
+              result="warp" />
+            <feOffset dx="0" result="warpOffset" />
+            <feDisplacementMap
+              xChannelSelector="R"
+              yChannelSelector="G"
+              scale="40"
+              in="SourceGraphic"
+              in2="warpOffset" />
+          </filter>
+        </defs>
+        <circle class="cursor__inner" cx="50" cy="50" r="10" />
+      </svg>
+      <svg
+        class="cursor"
+        width="100"
+        height="100"
+        viewBox="0 0 100 100"
+        data-amt="0.15"
+        data-radius-enter="40">
+        <circle class="cursor__inner" cx="50" cy="50" r="10" />
+      </svg>
+      <div class="content"></div>
+    </main>
+  </DefaultLayout>
 </template>
 
 <script>
@@ -58,7 +60,10 @@ gsap.registerPlugin(Flip);
 
 export default {
   name: "CursorEffect01",
-  layout: DefaultLayout,
+  components: {
+    DefaultLayout,
+  },
+
   setup() {
     onMounted(() => {
       // Initialize custom cursor

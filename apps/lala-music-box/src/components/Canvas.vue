@@ -43,7 +43,7 @@
 import { ref, onMounted } from "vue";
 import { useHomeStore } from "../stores/home";
 import { GenerateCanvas, GetSvgOptions } from "../core/canvas";
-// import { Cursor01 } from "@lau.ra";
+import { Cursor01 } from "@lau.ra/packages-animations/src/core/gsap";
 
 export default {
   name: "CanvasComponent",
@@ -68,7 +68,7 @@ export default {
 
     onMounted(() => {
       fetchPlaylist();
-      // new Cursor01(document.querySelectorAll(".cursor"), ".cursor-01 a, img");
+      new Cursor01(document.querySelectorAll(".cursor"), "canvas");
     });
 
     return { svg, canvas };
