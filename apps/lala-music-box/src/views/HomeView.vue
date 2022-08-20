@@ -7,7 +7,7 @@ import Canvas from "../components/Canvas.vue";
 import { onMounted } from "vue";
 
 onMounted(async () => {
-  console.log("lala");
+
 });
 </script>
 

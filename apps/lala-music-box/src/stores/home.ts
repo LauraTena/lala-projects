@@ -1,9 +1,9 @@
 import { defineStore } from "pinia";
-import Buffer from "buffer";
+import { Buffer } from "buffer";
 import { mappingPlaylist } from "../core/mappers";
 
-// const clientId = import.meta.env.VITE_APP_CLIENT_ID;
-// const clientSecret = import.meta.env.VITE_APP_CLIENT_SECRET;
+const clientId = import.meta.env.VITE_APP_CLIENT_ID;
+const clientSecret = import.meta.env.VITE_APP_CLIENT_SECRET;
 
 export const useHomeStore = defineStore("home", {
   state: () => ({
@@ -26,7 +26,7 @@ export const useHomeStore = defineStore("home", {
               "Accept": "application/json",
               "Content-Type": "application/x-www-form-urlencoded",
               "Authorization": `Basic ${Buffer.from(
-                `87a48d5b00524fd080faadee1545dace:9d6da809920546a993e411e7fa2a3c42`
+                `${clientId}:${clientSecret}`
               ).toString("base64")}`
             },
             body: "grant_type=client_credentials"

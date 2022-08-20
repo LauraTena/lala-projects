@@ -23,5 +23,5 @@ export default defineConfig({
     outDir: "../portfolio/projects/lala-music-box"
   },
   // eslint-disable-next-line no-undef
-  base: process.env.NODE_ENV === "production" ? "./" : "/"
+  // base: process.env.NODE_ENV === "production" ? "./" : "/",
 });

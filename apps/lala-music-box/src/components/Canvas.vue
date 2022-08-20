@@ -23,7 +23,7 @@ export default {
         await store.fetchPlaylist();
         initCanvas();
       } finally {
-        console.log("ddd");
+        //
       }
     };
 

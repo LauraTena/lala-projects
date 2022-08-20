@@ -43,7 +43,7 @@ export default function GenerateCanvas(svg, canvas, options, playlist) {
         paths: `.square-x-${i}-y-${j}`, // Shape we want to draw
         pointsNumber: 20, // Number of points
         maxDistance: -3000, // Max distance among points
-        color: "red",
+        color: "transparent",
         imageWidth: size,
         imageHeight: size,
         imageCentroid: true,
