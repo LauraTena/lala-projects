@@ -3,12 +3,47 @@
   <div class="jelly-container">
     <canvas ref="canvas"></canvas>
   </div>
+  <svg class="cursor" width="100" height="100" viewBox="0 0 100 100">
+      <defs>
+        <filter
+          id="cursor-filter"
+          x="-50%"
+          y="-50%"
+          width="200%"
+          height="200%"
+          filterUnits="objectBoundingBox">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0"
+            numOctaves="1"
+            result="warp" />
+          <feOffset dx="0" result="warpOffset" />
+          <feDisplacementMap
+            xChannelSelector="R"
+            yChannelSelector="G"
+            scale="40"
+            in="SourceGraphic"
+            in2="warpOffset" />
+        </filter>
+      </defs>
+      <circle class="cursor__inner" cx="50" cy="50" r="10" />
+    </svg>
+    <svg
+      class="cursor"
+      width="100"
+      height="100"
+      viewBox="0 0 100 100"
+      data-amt="0.15"
+      data-radius-enter="40">
+      <circle class="cursor__inner" cx="50" cy="50" r="10" />
+    </svg>
 </template>
 
 <script>
 import { ref, onMounted } from "vue";
 import { useHomeStore } from "../stores/home";
 import { GenerateCanvas, GetSvgOptions } from "../core/canvas";
+// import { Cursor01 } from "@lau.ra";
 
 export default {
   name: "CanvasComponent",
@@ -33,6 +68,7 @@ export default {
 
     onMounted(() => {
       fetchPlaylist();
+      // new Cursor01(document.querySelectorAll(".cursor"), ".cursor-01 a, img");
     });
 
     return { svg, canvas };

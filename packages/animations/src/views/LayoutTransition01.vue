@@ -494,8 +494,8 @@ export default {
   position: relative;
   display: flex;
   align-items: flex-start;
-  justify-content: start;
-  align-content: start;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 .content__number .oh > span {
