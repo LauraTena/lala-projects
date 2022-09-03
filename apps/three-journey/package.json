@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",
+    "dat.gui": "^0.7.9",
     "file-loader": "^6.2.0",
     "glsl-noise": "^0.0.0",
     "gsap": "^3.11.0",

@@ -76,10 +76,6 @@ export default {
 <style lang="scss" scoped>
 @import "../../../styles/src/config/config.scss";
 
-:root {
-  --cursor-stroke: var(--color-primary);
-}
-
 .content {
   pointer-events: none;
   height: var(--layout-row-6);
