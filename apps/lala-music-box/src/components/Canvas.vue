@@ -43,7 +43,7 @@
 import { ref, onMounted } from "vue";
 import { useHomeStore } from "../stores/home";
 import { GenerateCanvas, GetSvgOptions } from "../core/canvas";
-import { Cursor01 } from "@lau.ra/packages-animations/src/core/gsap";
+import { Cursor01 } from "@lau.ra/animations/src/core/gsap";
 
 export default {
   name: "CanvasComponent",
