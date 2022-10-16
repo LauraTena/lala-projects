@@ -1,13 +1,18 @@
-@import "../../../packages/styles/src/main.scss";
+@import "@lau.ra/styles/src/main.scss";
+@import "../src/scss/chillax/css/chillax.css";
+@import "../src/scss/synonym/css/synonym.css";
+@import "../src/scss/css-vars.scss";
+@import "../src/scss/grid.scss";
 
-:root {
-  --color-text: #f2f2f2;
-  --color-bg: #1a1a1a;
-}
 
 body {
   width: 100%;
   height: 100%;
   overflow: hidden;
   background-color: var(--color-bg);
+  font-family: var(--font-family-primary);
+}
+
+p {
+  font-family: var(--font-family-secondary);
 }

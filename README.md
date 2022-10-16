@@ -6,3 +6,4 @@ Technology:
 - vue 3
 - vite
 - pinia
+yar

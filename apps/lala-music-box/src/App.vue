@@ -5,7 +5,7 @@
 </template>
 
 <style scss>
-@import "@lau.ra/packages-animations/src/animations.scss";
+@import "@lau.ra/animations/src/animations.scss";
 
 :root {
   --cursor-stroke: red;

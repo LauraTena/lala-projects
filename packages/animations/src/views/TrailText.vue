@@ -113,7 +113,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../../packages/styles/src/config/config.scss";
+@import "@lau.ra/styles/src/config/config.scss";
 
 .intro-content__title--up {
   font-family: kudryashev-d-excontrast-sans, sans-serif;

@@ -84,7 +84,7 @@ import {
   TrailText,
   TextLinesReveal,
   FakeProgress
-} from "../../../../packages/animations/index";
+} from "@lau.ra/animations/index";
 import { gsap } from "gsap";
 import { Flip } from "gsap/Flip";
 gsap.registerPlugin(Flip);
@@ -326,7 +326,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../../packages/styles/src/config/config.scss";
+@import "@lau.ra/styles/src/config/config.scss";
 *,
 *::after,
 *::before {

@@ -22,7 +22,7 @@
 </template>
 
 <style lang="scss">
-@import "../../../../packages/styles/src/config/config.scss";
+@import "@lau.ra/styles/src/config/config.scss";
 
 .grid {
   display: flex;

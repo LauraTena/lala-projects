@@ -16,5 +16,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../styles/src/config/config.scss";
+@import "@lau.ra/styles/src/config/config.scss";
 </style>

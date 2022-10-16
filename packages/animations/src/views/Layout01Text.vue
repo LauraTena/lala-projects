@@ -179,7 +179,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../styles/src/config/config.scss";
+@import "@lau.ra/styles/src/config/config.scss";
 
 .layout-01 {
   display: grid;

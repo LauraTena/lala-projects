@@ -4,9 +4,10 @@ document.documentElement.setAttribute("theme", "light");
 </script>
 
 <template>
-  <div class="lala">lala</div>
-  <AppNavigation />
-  <router-view></router-view>
+  <div class="grid">
+    <AppNavigation />
+    <router-view></router-view>
+  </div>
 </template>
 
 <style lang="scss">
