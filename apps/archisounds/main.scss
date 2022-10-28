@@ -1,7 +1,19 @@
-@import "@lau.ra/styles/src/main.scss";
+@import '@lau.ra/styles/src/main.scss';
+@import '@lau.ra/styles/src/fonts/synonym/css/synonym.css';
+
+:root {
+  /* colors */
+  --color-bg: #191716;
+  --color-text: #beb7a4;
+  --color-primary: #e6af2e;
+  --color-secondary: #4e937a;
+  /* fonts */
+  --font-family-primary: 'Synonym-Variable';
+}
 
 body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  font-family: var(--font-family-primary);
 }

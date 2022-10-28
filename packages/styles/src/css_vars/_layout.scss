@@ -1,22 +1,6 @@
 $maxWidthPx: 1920;
 
 :root {
-  --layout-max-width: 100vw;
-  --layout-max-height: 100vh;
-  --layout-gap: 24px;
-  --layout-margin: 64px;
-  --layout-gap-2: 64px;
-  --layout-total-columns: 8;
-  --layout-total-rows: 8;
-
-  @for $i from 1 through 8 {
-    --layout-col-#{$i}: #{getGridWidth($i)};
-  }
-
-  @for $i from 1 through 12 {
-    --layout-row-#{$i}: #{getGridHeight($i)};
-  }
-
   @for $i from 1 through 20 {
     --eight-rule-#{$i}: #{getRemUnits($i * 8)};
   }

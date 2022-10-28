@@ -1,9 +1,8 @@
-@import "@lau.ra/styles/src/main.scss";
-@import "../src/scss/chillax/css/chillax.css";
-@import "../src/scss/synonym/css/synonym.css";
-@import "../src/scss/css-vars.scss";
-@import "../src/scss/grid.scss";
-
+@import '@lau.ra/styles/src/main.scss';
+@import '@lau.ra/styles/src/fonts/chillax/css/chillax.css';
+@import '@lau.ra/styles/src/fonts/synonym/css/synonym.css';
+@import '../src/scss/css-vars.scss';
+@import '../src/scss/grid.scss';
 
 body {
   width: 100%;

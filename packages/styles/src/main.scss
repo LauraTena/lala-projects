@@ -1,12 +1,11 @@
 // General
-@import "./fonts/fonts.scss";
 @import "./config/config.scss";
 @import "./config/animations";
 
 // App
-@import "./css_vars/colors";
-@import "./css_vars/fonts";
-@import "./css_vars/themes";
+// @import "./css_vars/colors";
+// @import "./css_vars/fonts";
+// @import "./css_vars/themes";
 @import "./css_vars/layout";
 @import "./base";
 @import "./layout";
@@ -18,4 +17,3 @@
 
 // Directives
 @import "./directives/tooltip.scss";
-

@@ -1,18 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
-import AboutView from '../views/AboutView.vue';
+import VisualUntitled001 from '../views/VisualUntitled001.vue';
+import VisualUntitled002 from '../views/VisualUntitled002.vue';
+import VisualUntitled003 from '../views/VisualUntitled003.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: '01',
+    component: VisualUntitled001,
   },
   {
-    path: '/about',
-    name: 'About',
-    component: AboutView,
-    //https://next.router.vuejs.org/guide/advanced/lazy-loading.html
+    path: '/02',
+    name: '02',
+    component: VisualUntitled002,
+  },
+  {
+    path: '/03',
+    name: '03',
+    component: VisualUntitled003,
   },
 ];
 
